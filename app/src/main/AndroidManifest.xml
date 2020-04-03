@@ -9,6 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".OtherCareerOpp"></activity>
+        <activity android:name=".OtherNetworking" />
+        <activity android:name=".Step6FirstDay" />
+        <activity android:name=".Step5OutcomeReject" />
+        <activity android:name=".Step5OutcomeOffer" />
+        <activity android:name=".Step4AcentreInterview" />
+        <activity android:name=".Step4AcentreGroup" />
+        <activity android:name=".Step3VideoInterview" />
+        <activity android:name=".Step2PsychBehavioural" />
+        <activity android:name=".Step2PsychNumerical" />
+        <activity android:name=".Step2PsychCognitive" />
+        <activity android:name=".Step1AppCv" />
+        <activity android:name=".Step1AppResume" />
+        <activity android:name=".Home" />
+        <activity android:name=".Profile" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
