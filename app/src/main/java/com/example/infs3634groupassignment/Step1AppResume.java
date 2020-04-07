@@ -58,5 +58,7 @@ public class Step1AppResume extends AppCompatActivity {
                 startActivity(new Intent(Step1AppResume.this, Settings.class));
             }
         });
+
+
     }
 }
