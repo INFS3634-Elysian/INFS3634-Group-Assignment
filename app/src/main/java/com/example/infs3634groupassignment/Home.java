@@ -39,10 +39,10 @@ public class Home extends AppCompatActivity {
     private void launchApplicationSteps(int position) {
         final Intent intent;
         if (position == 0) {
-            intent = new Intent(this, Step1AppCv.class);
+            intent = new Intent(this, Step1AppResume.class);
             startActivity(intent);
         } else if (position == 1) {
-            intent = new Intent(this, Step1AppResume.class);
+            intent = new Intent(this, Step1AppCv.class);
             startActivity(intent);
         } else if (position == 2) {
             intent = new Intent(this, Step2PsychBehavioural.class);
