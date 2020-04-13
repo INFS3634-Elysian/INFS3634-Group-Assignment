@@ -12,9 +12,9 @@
         android:id="@id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/ivNotebook"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView

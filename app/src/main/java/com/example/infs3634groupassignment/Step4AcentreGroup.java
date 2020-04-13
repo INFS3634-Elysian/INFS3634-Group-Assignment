@@ -1,22 +1,61 @@
 package com.example.infs3634groupassignment;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class Step4AcentreGroup extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    int[] images;
+    String[] description;
+    String[] groupacURL;
+
+
     private ImageView home;
     private ImageView trophy;
     private ImageView notebook;
     private ImageView profile;
     private ImageView settings;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step4_acentre_group);
+
+        recyclerView = findViewById(R.id.recyclerView);
+        images = new int[]{R.drawable.ac_1, R.drawable.ac_2, R.drawable.ac_3, R.drawable.ac_4};
+        description = new String[]{
+                "KPMG AC Success Guide 2020",
+                "How to ace assessment centre day",
+                "Practice Group Exercises",
+                "CommBank’s Assessment Centre Advice"
+
+        };
+        groupacURL = new String[]{
+                "https://www.assessmentcentrehq.com/kpmg-assessment-centre/",
+                "https://gradaustralia.com.au/interviews-and-assessments/how-to-ace-assessment-centre-day",
+                "https://www.assessmentday.co.uk/assessmentcentre/group-exercises.html",
+                "https://www.commbank.com.au/guidance/blog/attending-an-assessment-centre-201609.html"
+
+        };
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Step4AcentreGroup.this, LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        Step4aAdapter step4aAdapter = new Step4aAdapter(Step4AcentreGroup.this, images, description, groupacURL);
+        recyclerView.setAdapter(step4aAdapter);
+
+
+
+
+
         setTitle("Step 4: Assessment Centre- Group Work");
         home = findViewById(R.id.ivHome);
         trophy= findViewById(R.id.ivTrophy);
