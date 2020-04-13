@@ -21,6 +21,12 @@ public class Step5OutcomeOffer extends YouTubeBaseActivity {
     private ImageView profile;
     private ImageView settings;
 
+//    ImageView congrats = (ImageView) findViewById(R.id.ivCongrats);
+//    ImageView contract = (ImageView) findViewById(R.id.ivContract);
+//    ImageView firmEvent = (ImageView) findViewById(R.id.ivFirmEvent);
+//    int pic = getResources().getIdentifier("outcome_congrats","drawable","com.example.infs3634groupassignment")
+//    congrats.setImageDrawable(pic);
+
     YouTubePlayerView mYoutubePlayerView;
     Button btnPlayYoutubeVideo;
     YouTubePlayer.OnInitializedListener mOnInitialisedListener;
