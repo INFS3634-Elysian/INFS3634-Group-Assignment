@@ -81,4 +81,109 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:srcCompat="@drawable/nav_settings" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Congratulations!" />
+
+            <TextView
+                android:id="@+id/tvTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You will most likely hear from your recruiter through a phone call, where they may ask you to reflect on your personal experience throughout the recruitment process, before offering you the position at the firm. Here, sensitive information such as your remuneration package and general policy requirements may be discussed.  " />
+
+            <TextView
+                android:id="@+id/tvThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pro tip: make sure you have great follow up questions that show you're inquisitive and keen to start! " />
+
+            <TextView
+                android:id="@+id/tvFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Well, your hard work has finally paid off and your anticipation towards not knowing what to expect will fade before you know it. But... " />
+
+            <TextView
+                android:id="@+id/tvFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What happens now?" />
+
+            <TextView
+                android:id="@+id/tvSix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The period between the day you receive your offer and your very first day at work will differ firm to firm. Though typically, you may expect the following:" />
+
+            <view
+                android:id="@+id/youtubeVideo"
+                class="com.google.android.youtube.player.YouTubePlayerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnPlayYoutubeVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Play" />
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvSeven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvEight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvNine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvTen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvEleven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
