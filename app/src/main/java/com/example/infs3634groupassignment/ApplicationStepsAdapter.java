@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class ApplicationStepsAdapter extends RecyclerView.Adapter<ApplicationStepsAdapter.ApplicationStepsViewHolder> {
     private ArrayList<ApplicationDatabase> mApplicationDatabase;
     private RecyclerViewClickListener mListener;
+//    private int[] images = {R.drawable.resume_recycler};
 
     public ApplicationStepsAdapter(ArrayList<ApplicationDatabase> database, RecyclerViewClickListener listener){
         mApplicationDatabase = database;
@@ -55,6 +56,7 @@ public class ApplicationStepsAdapter extends RecyclerView.Adapter<ApplicationSte
     public void onBindViewHolder(ApplicationStepsViewHolder holder, int position) {
         ApplicationDatabase applicationDatabase =mApplicationDatabase.get(position);
         holder.name.setText(applicationDatabase.getName());
+//        holder.icon.setImageResource(R.drawable.resume_recycler);
     }
 
 
