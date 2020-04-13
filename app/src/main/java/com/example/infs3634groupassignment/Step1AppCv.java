@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class Step1AppCv extends AppCompatActivity {
     private ImageView home;
@@ -14,8 +13,6 @@ public class Step1AppCv extends AppCompatActivity {
     private ImageView notebook;
     private ImageView profile;
     private ImageView settings;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
