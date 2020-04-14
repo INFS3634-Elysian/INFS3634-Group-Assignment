@@ -5,31 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Step1AppCv">
-
-    <TextView
-        android:id="@+id/txvTitle2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/bold"
-        android:text="Why do we need résumés?"
-        android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="@+id/txvPart2"
-        app:layout_constraintTop_toBottomOf="@+id/txvPart1" />
-
-    <TextView
-        android:id="@+id/txvPart1"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/regular"
-        android:text="A résumé or resume is a document used and created by a person to present their background, skills, and accomplishments."
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvTitle1" />
+    tools:context=".Step1AppResume">
 
     <ImageView
         android:id="@+id/ivHome"
@@ -107,32 +83,21 @@
         app:srcCompat="@drawable/nav_settings" />
 
     <TextView
-        android:id="@+id/txvPart2"
-        android:layout_width="360dp"
+        android:id="@+id/txvPart1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
         android:fontFamily="@font/regular"
-        android:text="Résumés can be used for a variety of reasons, but most often they are used to secure new employment."
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/txvPart3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvTitle2" />
-
-    <TextView
-        android:id="@+id/txvPart3"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/regular"
-        android:text='A typical résumé contains a "summary" of relevant job experience and education. The résumé is usually one of the first items, along with a cover letter and sometimes an application for employment, which a potential employer sees regarding the job seeker and is typically used to screen applicants, often followed by an interview. '
+        android:text="A résumé or resume is a document used and created by a person to present their background, skills, and accomplishments."
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvPart2" />
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
     <TextView
         android:id="@+id/txvTitle1"
@@ -145,20 +110,84 @@
         app:layout_constraintStart_toStartOf="@+id/txvPart1"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="200dp"
-        android:layout_height="2dp"
-        android:background="@drawable/divider"
-        app:layout_constraintStart_toStartOf="@+id/txvPart1"
-        app:layout_constraintTop_toBottomOf="@+id/txvTitle1" />
+    <TextView
+        android:id="@+id/txvPart3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:fontFamily="@font/regular"
+        android:text='A typical résumé contains a "summary" of relevant job experience and education. The résumé is usually one of the first items, along with a cover letter and sometimes an application for employment, which a potential employer sees regarding the job seeker and is typically used to screen applicants, often followed by an interview. '
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvPart2" />
+
+    <TextView
+        android:id="@+id/txvPart2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:fontFamily="@font/regular"
+        android:text="Résumés can be used for a variety of reasons, but most often they are used to secure new employment."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <TextView
+        android:id="@+id/txvTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bold"
+        android:text="Why do we need résumés?"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvPart1" />
 
     <View
-        android:id="@+id/divider4"
+        android:id="@+id/divider2"
         android:layout_width="287dp"
         android:layout_height="2dp"
         android:background="@drawable/divider"
-        app:layout_constraintStart_toStartOf="@+id/txvPart2"
+        app:layout_constraintStart_toStartOf="@+id/txvTitle2"
         app:layout_constraintTop_toBottomOf="@+id/txvTitle2" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="205dp"
+        android:layout_height="2dp"
+        android:background="@drawable/divider"
+        app:layout_constraintStart_toStartOf="@+id/txvTitle1"
+        app:layout_constraintTop_toBottomOf="@+id/txvTitle1" />
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/ytvVideo1"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:autoPlay="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvPart3"
+        app:showFullScreenButton="true"
+        app:videoId="SGbXg9adDng" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
