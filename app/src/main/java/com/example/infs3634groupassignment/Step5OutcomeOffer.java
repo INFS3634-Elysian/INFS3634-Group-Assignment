@@ -43,30 +43,30 @@ public class Step5OutcomeOffer extends YouTubeBaseActivity {
         profile = findViewById(R.id.ivProfile);
         settings = findViewById(R.id.ivSettings);
 
-        Log.d(TAG,"onCreate: Starting");
-        btnPlayYoutubeVideo = (Button) findViewById(R.id.btnPlayYoutubeVideo);
-        mYoutubePlayerView = (YouTubePlayerView) findViewById(R.id.youtubeVideo);
-
-        mOnInitialisedListener = new YouTubePlayer.OnInitializedListener() {
-            @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                Log.d(TAG, "onClick: Done initialising.");
-                youTubePlayer.loadVideo("aifJqKiXaZA");
-            }
-
-            @Override
-            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-                Log.d(TAG, "onClick: Failed to initialise.");
-            }
-        };
-        btnPlayYoutubeVideo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG,"onClick: Initialising Youtuber Player.");
-                mYoutubePlayerView.initialize(YoutubeConfig.getApiKey(), mOnInitialisedListener);
-
-            }
-        });
+//        Log.d(TAG,"onCreate: Starting");
+//        btnPlayYoutubeVideo = (Button) findViewById(R.id.btnPlayYoutubeVideo);
+//        mYoutubePlayerView = (YouTubePlayerView) findViewById(R.id.youtubeVideo);
+//
+//        mOnInitialisedListener = new YouTubePlayer.OnInitializedListener() {
+//            @Override
+//            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+//                Log.d(TAG, "onClick: Done initialising.");
+//                youTubePlayer.loadVideo("aifJqKiXaZA");
+//            }
+//
+//            @Override
+//            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+//                Log.d(TAG, "onClick: Failed to initialise.");
+//            }
+//        };
+//        btnPlayYoutubeVideo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d(TAG,"onClick: Initialising Youtuber Player.");
+//                mYoutubePlayerView.initialize(YoutubeConfig.getApiKey(), mOnInitialisedListener);
+//
+//            }
+//        });
 
 
         home.setOnClickListener(new View.OnClickListener() {
