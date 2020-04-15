@@ -7,29 +7,117 @@
     android:background="#FFFFFF"
     tools:context=".Step1AppCv">
 
-    <TextView
-        android:id="@+id/txvTitle1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:fontFamily="@font/bold"
-        android:text="What is a Curriculum Vitae?"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="15dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/divider1"
-        android:layout_width="305dp"
-        android:layout_height="2dp"
-        android:background="@drawable/divider"
-        app:layout_constraintStart_toStartOf="@+id/txvTitle1"
-        app:layout_constraintTop_toBottomOf="@+id/txvTitle1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txvTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
+                android:text="What is a Curriculum Vitae?"
+                android:textSize="22sp" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="305dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="29dp"
+                android:paddingLeft="29dp"
+                android:background="@drawable/divider" />
+
+            <TextView
+                android:id="@+id/txvPart1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:fontFamily="@font/regular"
+                android:text="A curriculum vitae, often shortened as CV, is a written overview of someone's life's work.  A CV is a very in-depth document that describes your career journey step-by-step including all the achievments you are proud of, and all the publications that bear your name" />
+
+            <TextView
+                android:id="@+id/txvTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
+                android:text="How does it differ from a resume?"
+                android:textSize="22sp" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="29dp"
+                android:background="@drawable/divider" />
+
+            <TextView
+                android:id="@+id/txvPart2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:fontFamily="@font/regular"
+                android:text="The primary differences between a resume and a curriculum vitae are length, what is included and what each is used for. While both are used in job applications, a resume and a CV are not always interchangeable. " />
+
+            <TextView
+                android:id="@+id/txvPart3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:fontFamily="@font/regular"
+                android:text="While resumes are usually competency-based, showcasing one's skills and work experience, CVs are credential based. This requires providing a comprehensive listing of one's education, certifications, research experience and professional affiliations and memberships. An example CV can be seen below:" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="23dp">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/imageview"
+                    app:srcCompat="@drawable/cv_2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -37,19 +125,19 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/ivHome"
+        android:id="@+id/ivSettings"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginBottom="10dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivTrophy"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/nav_home" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivProfile"
+        app:srcCompat="@drawable/nav_settings" />
 
     <ImageView
         android:id="@+id/ivTrophy"
@@ -65,6 +153,21 @@
         app:layout_constraintEnd_toStartOf="@+id/ivNotebook"
         app:layout_constraintStart_toEndOf="@+id/ivHome"
         app:srcCompat="@drawable/nav_trophy" />
+
+    <ImageView
+        android:id="@+id/ivHome"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivTrophy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/nav_home" />
 
     <ImageView
         android:id="@+id/ivNotebook"
@@ -95,45 +198,4 @@
         app:layout_constraintEnd_toStartOf="@+id/ivSettings"
         app:layout_constraintStart_toEndOf="@+id/ivNotebook"
         app:srcCompat="@drawable/nav_profile" />
-
-    <ImageView
-        android:id="@+id/ivSettings"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="10dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivProfile"
-        app:srcCompat="@drawable/nav_settings" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="A curriculum vitae, often shortened as CV, is a written overview of someone's life's work.  A CV is a very in-depth document that describes your career journey step-by-step including all the achievments you are proud of, and all the publications that bear your name"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="72dp" />
-
-    <TextView
-        android:id="@+id/txvTitle2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/bold"
-        android:text="How does it differ from a resume?"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="196dp" />
-
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="365dp"
-        android:layout_height="2dp"
-        android:background="@drawable/divider"
-        app:layout_constraintStart_toStartOf="@+id/txvTitle2"
-        app:layout_constraintTop_toBottomOf="@+id/txvTitle2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
