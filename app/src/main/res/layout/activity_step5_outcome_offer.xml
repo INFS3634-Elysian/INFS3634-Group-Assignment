@@ -58,7 +58,7 @@
                     android:scaleType="centerCrop"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/outcome_congrats" />
+                    android:src="@drawable/outcome_congrats" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -240,7 +240,7 @@
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/outcome_contract" />
+                android:src="@drawable/outcome_contract" />
 
             <TextView
                 android:id="@+id/tvTwelve"
@@ -276,7 +276,12 @@
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/outcome_firmevent" />
+                android:src="@drawable/outcome_firmevent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
 
         </LinearLayout>
 
@@ -294,21 +299,6 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/ivProfile"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivSettings"
-        app:layout_constraintStart_toEndOf="@+id/ivNotebook"
-        app:srcCompat="@drawable/nav_profile" />
-
-    <ImageView
         android:id="@+id/ivNotebook"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -321,7 +311,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ivProfile"
         app:layout_constraintStart_toEndOf="@+id/ivTrophy"
-        app:srcCompat="@drawable/nav_notebook" />
+        android:src="@drawable/nav_notebook" />
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivSettings"
+        app:layout_constraintStart_toEndOf="@+id/ivNotebook"
+        android:src="@drawable/nav_profile" />
 
     <ImageView
         android:id="@+id/ivTrophy"
@@ -336,7 +341,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ivNotebook"
         app:layout_constraintStart_toEndOf="@+id/ivHome"
-        app:srcCompat="@drawable/nav_trophy" />
+        android:src="@drawable/nav_trophy" />
 
     <ImageView
         android:id="@+id/ivHome"
@@ -351,7 +356,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ivTrophy"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/nav_home" />
+        android:src="@drawable/nav_home" />
 
     <ImageView
         android:id="@+id/ivSettings"
@@ -366,6 +371,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
-        app:srcCompat="@drawable/nav_settings" />
+        android:src="@drawable/nav_settings" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

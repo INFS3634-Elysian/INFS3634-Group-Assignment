@@ -8,28 +8,33 @@
     tools:context=".Step1AppCv">
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="375dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:text='A résumé or resume is a document used and created by a person to present their background, skills, and accomplishments. Résumés can be used for a variety of reasons, but most often they are used to secure new employment. A typical résumé contains a "summary" of relevant job experience and education. The résumé is usually one of the first items, along with a cover letter and sometimes an application for employment, which a potential employer sees regarding the job seeker and is typically used to screen applicants, often followed by an interview. '
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txvTitle1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_margin="15dp"
         android:fontFamily="@font/bold"
-        android:text="Résumé"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="What is a Curriculum Vitae?"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="15dp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="305dp"
+        android:layout_height="2dp"
+        android:background="@drawable/divider"
+        app:layout_constraintStart_toStartOf="@+id/txvTitle1"
+        app:layout_constraintTop_toBottomOf="@+id/txvTitle1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/ivHome"
@@ -105,4 +110,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:srcCompat="@drawable/nav_settings" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A curriculum vitae, often shortened as CV, is a written overview of someone's life's work.  A CV is a very in-depth document that describes your career journey step-by-step including all the achievments you are proud of, and all the publications that bear your name"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <TextView
+        android:id="@+id/txvTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:text="How does it differ from a resume?"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="365dp"
+        android:layout_height="2dp"
+        android:background="@drawable/divider"
+        app:layout_constraintStart_toStartOf="@+id/txvTitle2"
+        app:layout_constraintTop_toBottomOf="@+id/txvTitle2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
