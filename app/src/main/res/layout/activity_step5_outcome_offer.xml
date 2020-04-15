@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="15dp"
                 android:paddingLeft="20dp"
-                android:text="If you received an offer,"
+                android:text="Well..."
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
@@ -40,7 +40,7 @@
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
                 android:text="Congratulations!"
-                android:textColor="#000000"
+                android:textColor="#8BC34A"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
                 <ImageView
                     android:id="@+id/ivCongrats"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="200dp"
                     android:background="@drawable/imageview"
                     android:scaleType="centerCrop"
                     app:layout_constraintStart_toStartOf="parent"
@@ -61,33 +61,6 @@
                     android:src="@drawable/outcome_congrats" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <TextView
-                android:id="@+id/tvTwo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:text="You would have most likely hear from your recruiter through a phone call. Here, they may ask you to reflect on your personal experience throughout the recruitment process, before offering you the position at the firm."
-                android:textColor="#000000"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tvThree"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:text="Pro tip: make sure you have great follow up questions that show you're inquisitive and keen to start! "
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvFour"
@@ -97,45 +70,20 @@
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
-                android:text="Well, your hard work has finally paid off and your anticipation towards not knowing what to expect will fade before you know it. But... "
+                android:text="Your hard work has finally paid off and your anticipation towards not knowing what to expect will fade before you know it. So... "
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tvFive"
+                android:id="@+id/textView18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-
-                android:text="What happens now?"
-                android:textColor="#000000"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-            <View
-                android:id="@+id/view3"
-
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/divider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
-                android:text="1. Receive your contract"
+                android:text="What happens now?"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -152,23 +100,44 @@
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
-            <view
-                android:id="@+id/youtubeVideo"
-                class="com.google.android.youtube.player.YouTubePlayerView"
+            <TextView
+                android:id="@+id/tvFive"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp" />
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:text="1. Employment Contract"
+                android:textColor="#FFC107"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btnPlayYoutubeVideo"
-                android:layout_width="match_parent"
+            <View
+                android:id="@+id/view3"
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/ytvVideo1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Play" />
 
-            <VideoView
-                android:id="@+id/videoView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                app:autoPlay="false"
+                app:showFullScreenButton="true"
+                app:videoId="aifJqKiXaZA">
+
+            </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
 
             <TextView
                 android:id="@+id/tvSeven"
@@ -186,13 +155,15 @@
                 android:id="@+id/tvEight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
-                android:text="Whilst it may feel daunting to query specific details of your contract, you should never hesitate to reach out to either a trusted member of your network or your recruiter to clarify your question. "
+                android:text="Pro-tip: Whilst it may feel daunting to query specific details of your contract, you should never hesitate to reach out to either a trusted member of your network or your recruiter to clarify your question(s)."
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvNine"
@@ -201,11 +172,23 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:text="2. Follow the onboarding process"
-                android:textColor="#000000"
-                android:textSize="16sp"
+                android:text="2. Onboarding Process"
+                android:textColor="#FFC107"
+                android:textSize="22sp"
                 android:textStyle="bold" />
+
+            <View
+                android:id="@+id/tvTwenty"
+                android:layout_width="240dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
 
             <TextView
                 android:id="@+id/tvTen"
@@ -219,22 +202,21 @@
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/tvEleven"
+            <ImageView
+                android:id="@+id/ivTable"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="400dp"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
-                android:text="- Financials. This may include tax or superannuation forms and bank details for salary or wage payments  \n- Identity verification. This may include completing a &quot;100 Point Identification Check&quot; that involves providing enough evidence to prove your identity. Typical documents may include your passport, birth certificate and driver's licence. \n- Further background checks. This may include disclosing information about any bankruptcy history or criminal records \n- Education check. This may include receiving university confirmation to verify your graduation date and academic transcript. \n- Reference check. This may include verbal or written references from your listed referees. "
-                android:textColor="#000000"
-                android:textSize="16sp" />
+                android:scaleType="fitXY"
+                android:src="@drawable/outcome_table" />
 
             <ImageView
                 android:id="@+id/ivContract"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="200dp"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
@@ -249,11 +231,22 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:text="3. Firm events prior to your first day"
-                android:textColor="#000000"
-                android:textSize="16sp"
+                android:text="3. Firm Events"
+                android:textColor="#FFC107"
+                android:textSize="22sp"
                 android:textStyle="bold" />
+
+            <View
+                android:id="@+id/tvTwentyOne"
+                android:layout_width="170dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/tvThirteen"
@@ -270,7 +263,7 @@
             <ImageView
                 android:id="@+id/ivFirmEvent"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="200dp"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
