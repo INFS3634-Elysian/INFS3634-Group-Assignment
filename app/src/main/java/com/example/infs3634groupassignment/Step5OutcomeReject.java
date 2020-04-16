@@ -19,7 +19,7 @@ public class Step5OutcomeReject extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step5_outcome_reject);
-        setTitle("Step 5: Final Outcome- Reject");
+        setTitle("Step 5: Final Outcome");
         home = findViewById(R.id.ivHome);
         trophy= findViewById(R.id.ivTrophy);
         notebook = findViewById(R.id.ivNotebook);

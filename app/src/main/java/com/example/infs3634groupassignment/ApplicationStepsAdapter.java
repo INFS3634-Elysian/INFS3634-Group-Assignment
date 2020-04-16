@@ -56,6 +56,42 @@ public class ApplicationStepsAdapter extends RecyclerView.Adapter<ApplicationSte
     public void onBindViewHolder(ApplicationStepsViewHolder holder, int position) {
         ApplicationDatabase applicationDatabase =mApplicationDatabase.get(position);
         holder.name.setText(applicationDatabase.getName());
+        if (applicationDatabase.getIcon().equals("home_resume")){
+            holder.icon.setImageResource((R.drawable.home_resume));
+        }
+        if (applicationDatabase.getIcon().equals("home_cv")){
+            holder.icon.setImageResource((R.drawable.home_cv));
+        }
+        if (applicationDatabase.getIcon().equals("home_behavioural")){
+            holder.icon.setImageResource((R.drawable.home_behavioural));
+        }
+        if (applicationDatabase.getIcon().equals("home_cognitive")){
+            holder.icon.setImageResource((R.drawable.home_cognitive));
+        }
+        if (applicationDatabase.getIcon().equals("home_numerical")){
+            holder.icon.setImageResource((R.drawable.home_numerical));
+        }
+        if (applicationDatabase.getIcon().equals("home_video")){
+            holder.icon.setImageResource((R.drawable.home_video));
+        }
+        if (applicationDatabase.getIcon().equals("home_groupwork")){
+            holder.icon.setImageResource((R.drawable.home_groupwork));
+        }
+        if (applicationDatabase.getIcon().equals("home_interview")){
+            holder.icon.setImageResource((R.drawable.home_interview));
+        }
+        if (applicationDatabase.getIcon().equals("home_outcome")){
+            holder.icon.setImageResource((R.drawable.home_outcome));
+        }
+        if (applicationDatabase.getIcon().equals("home_firstday")){
+            holder.icon.setImageResource((R.drawable.home_firstday));
+        }
+        if (applicationDatabase.getIcon().equals("home_networking")){
+            holder.icon.setImageResource((R.drawable.home_networking));
+        }
+        if (applicationDatabase.getIcon().equals("home_career")){
+            holder.icon.setImageResource((R.drawable.home_career));
+        }
 //        holder.icon.setImageResource(R.drawable.resume_recycler);
     }
 

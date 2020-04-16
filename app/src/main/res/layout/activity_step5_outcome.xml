@@ -21,6 +21,7 @@
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tvTwentyTwo"
+                android:fontFamily="@font/regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
@@ -48,6 +49,7 @@
                 android:id="@+id/tvSummary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
@@ -71,7 +73,9 @@
                 android:textColor="#000000"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
+                />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -92,7 +96,9 @@
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toStartOf="@+id/btnRejection"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/regular"
+                    />
 
                 <Button
                     android:id="@+id/btnRejection"
@@ -107,7 +113,9 @@
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btnOffer" />
+                    app:layout_constraintStart_toEndOf="@+id/btnOffer"
+                    android:fontFamily="@font/regular"
+                    />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout

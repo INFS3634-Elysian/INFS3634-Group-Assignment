@@ -33,7 +33,7 @@ public class Home extends AppCompatActivity {
         };
         mAdapter = new ApplicationStepsAdapter(ApplicationDatabase.getApplicationDatabase(), listener);
         mRecyclerView.setAdapter(mAdapter);
-        setTitle("Welcome to Your Personal Dashboard, Hamid");
+        setTitle("Welcome to Your Dashboard, Hamid");
     }
 
     private void launchApplicationSteps(int position) {

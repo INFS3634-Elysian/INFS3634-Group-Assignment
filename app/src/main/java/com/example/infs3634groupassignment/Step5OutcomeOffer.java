@@ -20,7 +20,7 @@ public class Step5OutcomeOffer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step5_outcome_offer);
-        setTitle("Step 5: Final Outcome- Offer");
+        setTitle("Step 5: Final Outcome");
         home = findViewById(R.id.ivHome);
         trophy= findViewById(R.id.ivTrophy);
         notebook = findViewById(R.id.ivNotebook);

@@ -30,7 +30,9 @@
                 android:text="Thank you for taking the time..."
                 android:textColor="#FFC107"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/regular"
+                />
 
             <View
                 android:id="@+id/tvTwentyThree"
@@ -57,6 +59,7 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
                 />
 
             <TextView
@@ -72,7 +75,9 @@
                 android:textColor="#000000"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
+                />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -93,7 +98,9 @@
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toStartOf="@+id/btnRejection"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/regular"
+                    />
 
                 <Button
                     android:id="@+id/btnRejection"
@@ -108,7 +115,9 @@
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btnOffer" />
+                    app:layout_constraintStart_toEndOf="@+id/btnOffer"
+                    android:fontFamily="@font/regular"
+                    />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -142,6 +151,7 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
                 />
 
             <TextView
@@ -151,11 +161,12 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:text="Whilst it may be tempting to delete the rejection email, you may want to ask yourself these questions:"
+                android:text="Whilst it can be tempting to delete the rejection email, you may want to ask yourself these questions:"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
                 />
 
             <TextView
@@ -168,7 +179,9 @@
                 android:text="1. How do I move forward?"
                 android:textColor="#FFC107"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/regular"
+                />
 
             <View
                 android:id="@+id/v4"
@@ -195,6 +208,7 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
                 />
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
@@ -223,6 +237,7 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
                 />
 
             <TextView
@@ -235,7 +250,9 @@
                 android:text="2. Should I respond to the email?"
                 android:textColor="#FFC107"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/regular"
+                />
 
             <View
                 android:id="@+id/v2"
@@ -262,6 +279,7 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
                 />
 
             <TextView
@@ -274,7 +292,9 @@
                 android:text="3. Why should I respond?"
                 android:textColor="#FFC107"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/regular"
+                />
 
             <View
                 android:id="@+id/v3"
@@ -301,6 +321,7 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
                 />
 
             <TextView
@@ -316,7 +337,9 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
+                />
 
             <TextView
                 android:id="@+id/tv8"
@@ -330,6 +353,7 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/regular"
                 />
 
             <androidx.constraintlayout.widget.ConstraintLayout
