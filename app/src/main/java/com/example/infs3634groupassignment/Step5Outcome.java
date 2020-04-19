@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class Step5Outcome extends AppCompatActivity {
+    // Declaring variables that will be used in this activity
     private ImageView home;
     private ImageView trophy;
     private ImageView notebook;
@@ -21,6 +22,7 @@ public class Step5Outcome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step5_outcome);
         setTitle("Step 5: Final Outcome");
+        // Linking java and xml attributes
         home = findViewById(R.id.ivHome);
         trophy= findViewById(R.id.ivTrophy);
         notebook = findViewById(R.id.ivNotebook);
@@ -29,6 +31,7 @@ public class Step5Outcome extends AppCompatActivity {
         offer = findViewById(R.id.btnOffer);
         rejection =findViewById(R.id.btnRejection);
 
+        // Directs users to a specific page depending on which icon they click on the navigation bar
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
