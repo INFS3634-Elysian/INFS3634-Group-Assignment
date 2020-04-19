@@ -147,7 +147,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="@drawable/imageview"
-                    android:scaleType="fitXY"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/outcome_congrats"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -320,21 +320,33 @@
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/outcome_table"
-                />
+                android:scaleType="centerCrop"
+                android:src="@drawable/outcome_table" />
 
-            <ImageView
-                android:id="@+id/ivContract"
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/outcome_contract"
-                />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:id="@+id/ivContract"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/outcome_contract"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <TextView
                 android:id="@+id/tvTwelve"
@@ -376,16 +388,33 @@
                 android:fontFamily="@font/regular"
                 />
 
-            <ImageView
-                android:id="@+id/ivFirmEvent"
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/outcome_firmevent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:id="@+id/ivFirmEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/outcome_firmevent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
 
             <TextView
                 android:id="@+id/textView6"

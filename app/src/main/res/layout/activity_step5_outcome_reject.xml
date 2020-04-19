@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Step1AppCv">
+    tools:context=".Step5OutcomeReject">
 
 
     <ScrollView
@@ -133,7 +133,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="@drawable/imageview"
-                    android:scaleType="fitXY"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/outcome_reject"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
