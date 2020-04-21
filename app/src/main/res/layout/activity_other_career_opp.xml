@@ -145,19 +145,24 @@
         android:id="@+id/textView24"
         android:layout_width="348dp"
         android:layout_height="53dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
         android:fontFamily="@font/roboto"
         android:text="We know how hard it is for you to find a job, so we've have supplied you with many different opportunities for you to get a start for yourself!"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="83dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
     <TextView
         android:id="@+id/textView25"
         android:layout_width="359dp"
         android:layout_height="70dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto"
         android:text="Good LUCK and let us know when you have landed yourself your first job!"
         android:textSize="20sp"
         android:textStyle="italic"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="529dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otherJobsBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
