@@ -8,13 +8,277 @@
     tools:context=".Step1AppCv"
    >
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@id/recyclerView"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:scrollbars="vertical"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
+                android:text="Group work at assessment centres"
+                android:textSize="22sp" />
+
+            <View
+                android:id="@+id/d0"
+                android:layout_width="287dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+
+                android:background="@drawable/divider" />
+
+            <TextView
+                android:id="@+id/tv0a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Group work is very common in assessment centres during the graduate selection process. During the group tasks, the assessors will be evaluating your problem-solving and communication skills and observing how you work in a team. See our top 3 tips below on how to navigate your group task"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
+                android:text="1. Show that you’re a team player"
+                android:textSize="22sp" />
+
+            <View
+                android:id="@+id/d1"
+                android:layout_width="287dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+
+                android:background="@drawable/divider" />
+
+
+            <TextView
+                android:id="@+id/tv1a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Employers are looking for suitable candidates for their team so they want to ensure that they’ll be recruiting a team player!"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv1b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Whilst taking the lead will get you noticed, it is important that you don’t push it to the point where you come off as being bossy. Be friendly, collaborative and encourage quieter members to contribute to the discussion"
+                android:textSize="16sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/imageview"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ac_teamplayer" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
+                android:text="2. Come prepared!"
+                android:textSize="22sp" />
+
+            <View
+                android:id="@+id/d2"
+                android:layout_width="205dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+
+                android:background="@drawable/divider"
+                android:paddingLeft="29dp" />
+
+            <TextView
+                android:id="@+id/tv2a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Ahead of the assessment centre, complete research online and see whether you can find any information on the type of group tasks the company may have.
+"               android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv2b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Some companies may even provide you with a case study before the assessment centre. Make sure you know the case study inside-out and have a strong understanding of what the assessors expected you to complete before assessment centre day"
+                android:textSize="16sp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/imageview"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ac_comeprepared" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
+                android:text="3. Act professionally"
+                android:textSize="22sp" />
+
+            <View
+                android:id="@+id/d3"
+                android:layout_width="287dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+
+                android:background="@drawable/divider" />
+
+
+
+            <TextView
+                android:id="@+id/tv3a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Whilst you want your personality to shine and be notified by assessors, it’s important that you behave like the employees of the company. Make sure you dress appropriately and arrive punctually on the day."
+                android:textSize="16sp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/iv123"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/imageview"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ac_actprofessionally" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scrollbars="vertical"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                tools:layout_editor_absoluteX="-200dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 
     <ImageView

@@ -3,13 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.infs3634groupassignment">
 
-    <uses-sdk tools:overrideLibrary="com.pierfrancescosoffritti.androidyoutubeplayer" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
@@ -18,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OtherDetail"></activity>
+        <activity android:name=".Step2PsychCognitiveScore"></activity>
+        <activity android:name=".OtherDetail" />
         <activity android:name=".Step5Outcome" />
         <activity android:name=".Notebook" />
         <activity android:name=".Achievement" />
@@ -52,5 +46,12 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-sdk tools:overrideLibrary="com.pierfrancescosoffritti.androidyoutubeplayer" />
 
 </manifest>
