@@ -110,19 +110,26 @@
         android:layout_height="150dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20">
+        app:layout_constraintTop_toBottomOf="@+id/textView21">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="145dp"
+            app:srcCompat="@drawable/networking_tips" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/bold"
             android:text="Networking tips" />
     </androidx.cardview.widget.CardView>
 
@@ -130,18 +137,24 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="127dp"
+        android:layout_marginLeft="127dp"
+        android:layout_marginTop="31dp"
         android:fontFamily="@font/roboto_black"
         android:text="Networking"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="31dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="338dp"
         android:layout_height="109dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/roboto"
         android:text="Networking is about establishing and nurturing long-term, mutually beneficial relationships with the people you meet, whether you're waiting to order your morning coffee, participating in an intramural sports league, or attending a work conference. Feel free to explore this area!"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="87dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 </androidx.constraintlayout.widget.ConstraintLayout>

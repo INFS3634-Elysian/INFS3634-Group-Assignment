@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 public class OtherNetworkTipsFragment extends Fragment {
@@ -15,10 +16,15 @@ public class OtherNetworkTipsFragment extends Fragment {
         // Required empty public constructor
     }
 
+    private Button connect1, connect2, connect3, connect4;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        //Connect Buttons
+
 
     }
 
