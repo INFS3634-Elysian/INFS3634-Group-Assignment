@@ -286,5 +286,8 @@ public class Step2PsychBehavioural extends AppCompatActivity {
         progress = findViewById(R.id.txvQNo);
         progress.setText(counter + "/3");
 
+        score = findViewById(R.id.txvScore);
+        score.setText("");
+
     }
 }
