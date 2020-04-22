@@ -24,8 +24,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="30dp"
                 android:paddingRight="20dp"
+                android:gravity="center_horizontal"
                 android:text="Thank you for taking the time..."
                 android:textColor="#FFC107"
                 android:textSize="22sp"
@@ -33,33 +34,19 @@
                 android:fontFamily="@font/regular"
                 />
 
-            <View
-                android:id="@+id/tvTwentyThree"
-                android:layout_width="320dp"
-                android:layout_height="2dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="10dp"
-                android:paddingBottom="10dp"
-                android:background="@drawable/divider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/tvSummary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:text="After weeks (and perhaps even months) of hard work spent on polishing your resume, completing psychometric tests and attending interviews, you are finally contacted by your recuiter..."
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:fontFamily="@font/regular"
-                />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/tvOutcome"
@@ -93,7 +80,7 @@
                     android:layout_marginLeft="100dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="#8BC34A"
+                    android:background="@drawable/buttongreen"
                     android:text="Offer"
                     android:textAllCaps="false"
                     android:textSize="18sp"
@@ -110,7 +97,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginEnd="100dp"
                     android:layout_marginRight="100dp"
-                    android:background="#C8C2BF"
+                    android:background="@drawable/buttongray"
                     android:text="Rejection"
                     android:textAllCaps="false"
                     android:textSize="18sp"
@@ -185,14 +172,13 @@
                 />
 
             <TextView
-                android:id="@+id/tvSix"
+                android:id="@+id/tv6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
-                android:text="The period between the day you receive your offer and your very first day at work will differ firm to firm. Though typically, you may expect the following:"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:fontFamily="@font/regular"
@@ -202,20 +188,21 @@
                 android:id="@+id/tvFive"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:text="1. Employment Contract"
                 android:textColor="#FFC107"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/regular"
-                />
+                android:textStyle="bold" />
 
             <View
                 android:id="@+id/view3"
                 android:layout_width="250dp"
                 android:layout_height="2dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"
@@ -240,18 +227,31 @@
 
 
             <TextView
-                android:id="@+id/tvSeven"
+                android:id="@+id/tv7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:text="So a quick summary of what to look out for in an employment contract follows the below: \n- Notice provision \n- Post-termination restrictions \n- Bonus schemes \n- Additional clauses"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:fontFamily="@font/regular"
                 />
+
+
+            <TextView
+                android:id="@+id/tv7a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:text="- Notice provision \n- Post-termination restrictions \n- Bonus schemes \n- Additional clauses"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:fontFamily="@font/regular"
+                />
+
 
             <TextView
                 android:id="@+id/tvEight"
@@ -261,8 +261,7 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:text="Pro-tip: Whilst it may feel daunting to query specific details of your contract, you should never hesitate to reach out to either a trusted member of your network or your recruiter to clarify your question(s)."
+                android:text="Pro-tip!"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -270,18 +269,34 @@
                 />
 
             <TextView
+                android:id="@+id/tv8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:text="Whilst it may feel daunting to query specific details of your contract, you should never hesitate to reach out to either a trusted member of your network or your recruiter to clarify your question(s)."
+                android:textColor="#000000"
+                android:textSize="16sp"
+
+                android:fontFamily="@font/regular"
+                />
+
+            <TextView
                 android:id="@+id/tvNine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
+
                 android:paddingRight="20dp"
                 android:text="2. Onboarding Process"
                 android:textColor="#FFC107"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/regular"
-                />
+                android:textStyle="bold" />
 
             <View
                 android:id="@+id/tvTwenty"
@@ -291,6 +306,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="10dp"
+                android:layout_gravity="center_horizontal"
                 android:background="@drawable/divider"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -299,14 +315,13 @@
 
 
             <TextView
-                android:id="@+id/tvTen"
+                android:id="@+id/tv10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
-                android:text="Before you walk through the doors of the firm again, a number of checks may be conducted to organise any necessary paperwork, verify your identity and prepare you for your first day. Each firm has a different onboarding process, but you may expect to go through some of the following steps:"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:fontFamily="@font/regular"
@@ -352,15 +367,16 @@
                 android:id="@+id/tvTwelve"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:text="3. Firm Events"
                 android:textColor="#FFC107"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/regular"
-                />
+                android:textStyle="bold" />
 
             <View
                 android:id="@+id/tvTwentyOne"
@@ -371,6 +387,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/divider"
+                android:layout_gravity="center_horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 

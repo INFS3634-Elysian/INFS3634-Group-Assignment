@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:ems="10"
@@ -132,7 +132,6 @@
         app:layout_constraintTop_toBottomOf="@id/tvDate" />
 
 
-
     <Button
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
@@ -142,7 +141,11 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="15dp"
-        android:text="Save"
+        android:background="@drawable/buttongreen"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Save my notes!"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/ivNotebook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

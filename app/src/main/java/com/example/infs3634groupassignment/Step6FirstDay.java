@@ -37,13 +37,15 @@ public class Step6FirstDay extends AppCompatActivity {
         settings = findViewById(R.id.ivSettings);
 
         // Linking java and xml attributes
-        wear = (ImageView) findViewById(R.id.ivWear);
-        bring = (ImageView) findViewById(R.id.ivBring);
-        say = (ImageView) findViewById(R.id.ivSay);
-        other = (ImageView) findViewById(R.id.ivOther);
+        wear = (ImageView) findViewById(R.id.ivApp);
+        bring = (ImageView) findViewById(R.id.ivTeam);
+        say = (ImageView) findViewById(R.id.ivPrivacy);
+        other = (ImageView) findViewById(R.id.ivAccount);
         finalText = findViewById(R.id.tvFinal);
         divider = findViewById(R.id.divider);
         finalText2 = findViewById(R.id.tvFinal2);
+
+
 
         // Setting the final text and divider to be invisible for the meantime. It will reappear once the user clicks on one of the four "What to..." images.
         finalText.setVisibility(View.INVISIBLE);

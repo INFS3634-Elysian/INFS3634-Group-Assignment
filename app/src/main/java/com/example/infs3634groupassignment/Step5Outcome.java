@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Step5Outcome extends AppCompatActivity {
     // Declaring variables that will be used in this activity
@@ -17,6 +19,7 @@ public class Step5Outcome extends AppCompatActivity {
     private ImageView settings;
     private Button offer;
     private Button rejection;
+    private TextView summary;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,10 @@ public class Step5Outcome extends AppCompatActivity {
         settings = findViewById(R.id.ivSettings);
         offer = findViewById(R.id.btnOffer);
         rejection =findViewById(R.id.btnRejection);
+        summary = findViewById(R.id.tvSummary);
+
+        String text1 = ("After weeks (and perhaps even <b>months</b>) of hard work spent on polishing your resume, completing psychometric tests and attending interviews, <b>you are finally contacted by your recruiter...</b>");
+        summary.setText(Html.fromHtml(text1));
 
         // Directing users to a specific page depending on which icon they click on the navigation bar
         home.setOnClickListener(new View.OnClickListener() {
