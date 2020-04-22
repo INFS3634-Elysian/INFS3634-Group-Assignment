@@ -73,7 +73,7 @@ public class Step6FirstDay extends AppCompatActivity {
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { 
+            public void onClick(View v) {
                 startActivity(new Intent(Step6FirstDay.this, Profile.class));
             }
         });

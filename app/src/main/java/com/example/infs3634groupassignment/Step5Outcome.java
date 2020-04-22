@@ -31,7 +31,7 @@ public class Step5Outcome extends AppCompatActivity {
         offer = findViewById(R.id.btnOffer);
         rejection =findViewById(R.id.btnRejection);
 
-        // Directs users to a specific page depending on which icon they click on the navigation bar
+        // Directing users to a specific page depending on which icon they click on the navigation bar
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
