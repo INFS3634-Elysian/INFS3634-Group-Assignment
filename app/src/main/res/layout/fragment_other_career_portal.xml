@@ -17,6 +17,7 @@
         android:layout_marginLeft="68dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/roboto_black"
+        android:gravity="center"
         android:text="UNSW Career Portal"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +65,7 @@
         android:layout_marginLeft="36dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/roboto"
+        android:gravity="fill_horizontal"
         android:text="UNSW is committed to improving student, employer and staff engagement. For students who are relatively new to the university, or do not have much job experience, UNSW Career Portal is the perfect place for you to launch your career! Simply head over to our website, and you will be able to find a variety of jobs that match your requirement! What are you waiting for? Click on the button down below and join us! "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView36" />
