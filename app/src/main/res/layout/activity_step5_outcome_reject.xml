@@ -44,7 +44,6 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -59,9 +58,7 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
                 android:text="I received a(n)..."
-                android:textColor="#000000"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -76,37 +73,35 @@
 
                 <Button
                     android:id="@+id/btnOffer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="100dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
                     android:background="@drawable/buttongray"
+                    android:fontFamily="@font/regular"
                     android:text="Offer"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toStartOf="@+id/btnRejection"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:fontFamily="@font/regular"
-                    />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <Button
                     android:id="@+id/btnRejection"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginEnd="100dp"
-                    android:layout_marginRight="100dp"
+                    android:layout_marginRight="50dp"
                     android:background="@drawable/buttonred"
+                    android:fontFamily="@font/regular"
                     android:text="Rejection"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btnOffer"
-                    android:fontFamily="@font/regular"
-                    />
+                    app:layout_constraintStart_toEndOf="@+id/btnOffer" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -114,7 +109,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 >
 
                 <ImageView
@@ -137,7 +132,7 @@
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:text="It can be hard not to take a job rejection personally. And whilst it can be tempting to delete the rejection email, you may want to ask yourself these questions:"
-                android:textColor="#000000"
+                
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -148,14 +143,11 @@
                 android:id="@+id/tv9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/regular"
-                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="15dp"
                 android:paddingRight="20dp"
                 android:text="1. How do I move forward?"
-                android:textColor="#FFC107"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -163,17 +155,13 @@
                 android:id="@+id/v4"
                 android:layout_width="280dp"
                 android:layout_height="2dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/divider"
-                android:paddingBottom="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
-
-
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/ytvVideo1"
@@ -196,8 +184,6 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-
-                android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -209,12 +195,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/regular"
-                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="15dp"
                 android:paddingRight="20dp"
                 android:text="2. Should I respond to the email?"
-                android:textColor="#FFC107"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -222,13 +206,11 @@
                 android:id="@+id/v2"
                 android:layout_width="330dp"
                 android:layout_height="2dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/divider"
-                android:paddingBottom="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -240,7 +222,6 @@
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:text="Yes."
-                android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -252,13 +233,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/regular"
-                android:gravity="center_horizontal"
-
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="15dp"
                 android:paddingRight="20dp"
                 android:text="3. Why should I respond?"
-                android:textColor="#FFC107"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -266,13 +244,11 @@
                 android:id="@+id/v3"
                 android:layout_width="260dp"
                 android:layout_height="2dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/divider"
-                android:paddingBottom="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -283,43 +259,22 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="@font/regular"
                 />
 
-            <TextView
-                android:id="@+id/tv7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:text="Pro-tips on curating a response!"
-
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:fontFamily="@font/regular"
-                />
 
             <TextView
                 android:id="@+id/tv7a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:text="- Acknowledge the rejection \n- Express gratitude \n- Express continued interest \n- Request for feedback"
-                android:textColor="#000000"
+                android:text="Pro-tips on curating a response: acknowledge the rejection, express gratitude, express continued interest and request for feedback."
                 android:textSize="16sp"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="@font/regular"
@@ -333,7 +288,7 @@
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:text="Example below:"
-                android:textColor="#000000"
+                
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -72,11 +72,11 @@ public class Settings extends AppCompatActivity {
                 finalText.setVisibility(View.VISIBLE);
                 finalText.setText("About the Team");
                 divider.setVisibility(View.VISIBLE);
-                String text2 = ("Our team consists of four founders who together designed and developed the application:" +
-                        "<br /><br /><b>Cathy Liang</b> | Bachelor of Commerce and Information Systems at UNSW)" +
-                        "<br /><b>Jasen Yu</b> | Bachelor of Commerce and Information Systems at UNSW)" +
-                        "<br /><b>Sandra Ma</b> | Bachelor of Commerce and Information Systems at UNSW)" +
-                        "<br /><b>Truman Ng</b> | Bachelor of Commerce and Information Systems at UNSW)"
+                String text2 = ("Our team consists of the following four founders who together, designed and developed the application:" +
+                        "<br /><br /><b>Cathy Liang</b> | Bachelor of Commerce and Bachelor of Information Systems at UNSW" +
+                        "<br /><b>Jasen Yu</b> | Bachelor of Commerce and Bachelor of Information Systems at UNSW" +
+                        "<br /><b>Sandra Ma</b> | Bachelor of Commerce and Bachelor of Information Systems at UNSW" +
+                        "<br /><b>Truman Ng</b> | Bachelor of Commerce and Bachelor of Information Systems at UNSW"
                 );
                 finalText2.setText(Html.fromHtml(text2));
             }

@@ -34,7 +34,6 @@
                 android:fontFamily="@font/regular"
                 />
 
-
             <TextView
                 android:id="@+id/tvSummary"
                 android:layout_width="match_parent"
@@ -43,29 +42,23 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
-
             <TextView
-                android:id="@+id/tvOutcome"
+                android:id="@+id/tvOutcome1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
                 android:text="I received a(n)..."
-                android:textColor="#000000"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="@font/regular"
                 />
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -74,37 +67,36 @@
 
                 <Button
                     android:id="@+id/btnOffer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="100dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
                     android:background="@drawable/buttongreen"
+                    android:fontFamily="@font/regular"
                     android:text="Offer"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toStartOf="@+id/btnRejection"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:fontFamily="@font/regular"
-                    />
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <Button
                     android:id="@+id/btnRejection"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginEnd="100dp"
-                    android:layout_marginRight="100dp"
+                    android:layout_marginRight="50dp"
                     android:background="@drawable/buttongray"
+                    android:fontFamily="@font/regular"
                     android:text="Rejection"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btnOffer"
-                    android:fontFamily="@font/regular"
-                    />
+                    app:layout_constraintStart_toEndOf="@+id/btnOffer" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -145,64 +137,27 @@
                 android:id="@+id/tvFour"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:text="Your hard work has finally paid off and you can now relax! So... "
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:fontFamily="@font/regular"
-                />
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:text="What happens now?"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/regular"
-                />
-
-            <TextView
-                android:id="@+id/tv6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:fontFamily="@font/regular"
-                />
+                android:text="Your hard work has finally paid off and you can now relax! So what happens now? The period between the day you receive your offer and your very first day at work will differ firm to firm. Though typically, you may expect the following:"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvFive"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/regular"
-                android:gravity="center_horizontal"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
                 android:text="1. Employment Contract"
-                android:textColor="#FFC107"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textSize="22sp" />
 
             <View
                 android:id="@+id/view3"
                 android:layout_width="250dp"
                 android:layout_height="2dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"
@@ -215,7 +170,6 @@
                 android:id="@+id/ytvVideo1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
@@ -225,61 +179,15 @@
 
             </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
 
-
-            <TextView
-                android:id="@+id/tv7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:fontFamily="@font/regular"
-                />
-
-
-            <TextView
-                android:id="@+id/tv7a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:text="- Notice provision \n- Post-termination restrictions \n- Bonus schemes \n- Additional clauses"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:fontFamily="@font/regular"
-                />
-
-
-            <TextView
-                android:id="@+id/tvEight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:text="Pro-tip!"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/regular"
-                />
-
             <TextView
                 android:id="@+id/tv8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:text="Whilst it may feel daunting to query specific details of your contract, you should never hesitate to reach out to either a trusted member of your network or your recruiter to clarify your question(s)."
-                android:textColor="#000000"
+                android:paddingTop="10dp"
+                android:text="Pro-tip: Whilst it may feel daunting to query specific details of your contract, you should never hesitate to reach out to either a trusted member of your network or your recruiter to clarify your question(s)."
                 android:textSize="16sp"
-
                 android:fontFamily="@font/regular"
                 />
 
@@ -288,13 +196,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/regular"
-                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-
+                android:paddingTop="15dp"
                 android:paddingRight="20dp"
                 android:text="2. Onboarding Process"
-                android:textColor="#FFC107"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -306,7 +211,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="10dp"
-                android:layout_gravity="center_horizontal"
                 android:background="@drawable/divider"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -321,8 +225,6 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:textColor="#000000"
                 android:textSize="16sp"
                 android:fontFamily="@font/regular"
                 />
@@ -330,51 +232,22 @@
             <ImageView
                 android:id="@+id/ivTable"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="380dp"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="15dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/outcome_table" />
-
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp">
-
-                <ImageView
-                    android:id="@+id/ivContract"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="10dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/outcome_contract"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             <TextView
                 android:id="@+id/tvTwelve"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/regular"
-                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="15dp"
                 android:paddingRight="20dp"
                 android:text="3. Firm Events"
-                android:textColor="#FFC107"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -387,7 +260,6 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/divider"
-                android:layout_gravity="center_horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -398,9 +270,7 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
                 android:text="Some firms may host firm-wide events or an induction evening. Make sure you go as it's a great opportunity to meet new people and perhaps learn more about who you will working with."
-                android:textColor="#000000"
                 android:textSize="16sp"
                 android:fontFamily="@font/regular"
                 />
@@ -418,9 +288,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
+                    android:paddingTop="15dp"
                     android:paddingRight="20dp"
-                    android:paddingBottom="10dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/outcome_firmevent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -439,6 +308,21 @@
                 android:layout_height="50dp"
                 android:fontFamily="@font/regular"
                 />
+
+            <TextView
+                android:id="@+id/tvOutcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:text="I received a(n)..."
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </LinearLayout>

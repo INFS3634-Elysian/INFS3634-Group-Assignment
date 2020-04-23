@@ -44,7 +44,7 @@
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:text="Despite going through the entire recruitment process (which was nerve-racking enough!), starting the job can be just as stressful! \n\nThere's often many factors to consider and a lot of pressure to excel expectations, on your first day of work."
-                android:textColor="#000000"
+                
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:text="To address these concerns, a number to top tips are collated below (tap the images to see more!):"
-                android:textColor="#000000"
+                
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +107,7 @@
                     android:paddingRight="20dp"
                     android:paddingBottom="5dp"
                     android:text="What to Wear"
-                    android:textColor="#000000"
+                    
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/tv3"
@@ -128,7 +128,7 @@
                     android:paddingRight="20dp"
                     android:paddingBottom="5dp"
                     android:text="What to Bring"
-                    android:textColor="#000000"
+                    
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -177,7 +177,7 @@
                     android:paddingRight="20dp"
                     android:paddingBottom="5dp"
                     android:text="What to Say"
-                    android:textColor="#000000"
+                    
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/tv5"
@@ -199,7 +199,7 @@
                     android:paddingRight="20dp"
                     android:paddingBottom="5dp"
                     android:text="Other"
-                    android:textColor="#000000"
+                    
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -271,7 +271,7 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:textColor="#000000"
+                
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
