@@ -7,6 +7,89 @@
     android:background="#FFFFFF"
     tools:context=".Step1AppCv">
 
+    <EditText
+        android:id="@+id/editHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:fontFamily="@font/regular"
+        android:hint="Heading"
+        android:textColorHint="@color/light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="89dp"
+        app:layout_constraintStart_toStartOf="@id/editHeading"
+        app:layout_constraintTop_toBottomOf="@id/editHeading"
+        android:fontFamily="@font/regular"
+        />
+
+
+    <EditText
+        android:id="@+id/editBody"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="top|left"
+        android:ems="10"
+        android:fontFamily="@font/regular"
+        android:hint="Start typing your notes!"
+        android:textColorHint="@color/light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate"
+
+        />
+
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/buttongreen"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Save my notes!"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/ivNotebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <ImageView
         android:id="@+id/ivHome"
         android:layout_width="30dp"
@@ -81,4 +164,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:srcCompat="@drawable/nav_settings" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

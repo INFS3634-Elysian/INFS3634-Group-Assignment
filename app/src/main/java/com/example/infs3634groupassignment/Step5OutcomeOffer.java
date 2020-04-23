@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class Step5OutcomeOffer extends AppCompatActivity {
@@ -18,6 +22,9 @@ public class Step5OutcomeOffer extends AppCompatActivity {
     private ImageView settings;
     private Button offer;
     private Button rejection;
+    private TextView summary;
+    private TextView tv10;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step5_outcome_offer);
@@ -30,6 +37,17 @@ public class Step5OutcomeOffer extends AppCompatActivity {
         settings = findViewById(R.id.ivSettings);
         offer = findViewById(R.id.btnOffer);
         rejection =findViewById(R.id.btnRejection);
+        summary = findViewById(R.id.tvSummary);
+        tv10 = findViewById(R.id.tv10);
+
+        String text1 = ("After weeks (and perhaps even <b>months</b>) of hard work spent on polishing your resume, completing psychometric tests and attending interviews, <b>you are finally contacted by your recruiter...</b>");
+        summary.setText(Html.fromHtml(text1));
+        String text10 = ("A number of checks may be conducted to organise any necessary paperwork, verify your identity and prepare you for your first day. " +
+                "\n\nAgain, <b>each firm has a different onboarding process</b>. However, you can expect to go through some of the following steps:");
+        tv10.setText(Html.fromHtml(text10));
+
+
+
 
         // Directs users to a specific page depending on which icon they click on the navigation bar
         home.setOnClickListener(new View.OnClickListener() {

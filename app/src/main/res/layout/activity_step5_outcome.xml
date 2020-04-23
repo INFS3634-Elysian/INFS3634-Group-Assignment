@@ -19,31 +19,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tvTwentyTwo"
-                android:fontFamily="@font/regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="30dp"
                 android:paddingRight="20dp"
                 android:text="Thank you for taking the time..."
                 android:textColor="#FFC107"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <View
-                android:id="@+id/tvTwentyThree"
-                android:layout_width="320dp"
-                android:layout_height="2dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="10dp"
-                android:paddingBottom="10dp"
-                android:background="@drawable/divider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/tvSummary"
@@ -53,8 +43,6 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:text="After weeks (and perhaps even months) of hard work spent on polishing your resume, completing psychometric tests and attending interviews, you are finally contacted by your recuiter..."
-                android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -68,9 +56,7 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="10dp"
                 android:text="I received a(n)..."
-                android:textColor="#000000"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -85,37 +71,35 @@
 
                 <Button
                     android:id="@+id/btnOffer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="100dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="#C8C2BF"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/buttongray"
+                    android:fontFamily="@font/regular"
                     android:text="Offer"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toStartOf="@+id/btnRejection"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:fontFamily="@font/regular"
-                    />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <Button
                     android:id="@+id/btnRejection"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginEnd="100dp"
-                    android:layout_marginRight="100dp"
-                    android:background="#C8C2BF"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/buttongray"
+                    android:fontFamily="@font/regular"
                     android:text="Rejection"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btnOffer"
-                    android:fontFamily="@font/regular"
-                    />
+                    app:layout_constraintStart_toEndOf="@+id/btnOffer" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -123,7 +107,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 >
 
                 <ImageView

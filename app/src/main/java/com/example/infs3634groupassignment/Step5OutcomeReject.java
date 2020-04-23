@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Step5OutcomeReject extends AppCompatActivity {
     // Declaring variables that will be used in this activity
@@ -16,6 +18,10 @@ public class Step5OutcomeReject extends AppCompatActivity {
     private ImageView profile;
     private ImageView settings;
     private Button offer;
+    private TextView summary;
+    private TextView tv11;
+    private TextView tv6;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +34,22 @@ public class Step5OutcomeReject extends AppCompatActivity {
         profile = findViewById(R.id.ivProfile);
         settings = findViewById(R.id.ivSettings);
         offer = findViewById(R.id.btnOffer);
+        summary = findViewById(R.id.tvSummary);
+        tv11= findViewById(R.id.tv11);
+        tv6 = findViewById(R.id.tv6);
+
+        String text1 = ("After weeks (and perhaps even <b>months</b>) of hard work spent on polishing your resume, completing psychometric tests and attending interviews, <b>you are finally contacted by your recruiter...</b>");
+        summary.setText(Html.fromHtml(text1));
+        String text11= ("So a quick summary: " +
+                "<br />- Let it go and cry it out! " +
+                "<br />- <b>Be honest with yourself</b> and ask yourself why you didn't receive the offer " +
+                "<br />- Know that this just <b>wasn't the right opportunity</b>");
+        tv11.setText(Html.fromHtml(text11));
+        String text6= ("By sending a polite response to your recruiter, you'll already: " +
+                "<br />- <b> Stand out </b> among the pool of others who ignored or deleted that rejection email " +
+                "<br />- Demonstrate your ability to <b> respond to negative news well </b> and " +
+                "<br />- Potentially <b> strengthen your professional relationship </b> with your recruiter");
+        tv6.setText(Html.fromHtml(text6));
 
         // Directs users to a specific page depending on which icon they click on the navigation bar
         home.setOnClickListener(new View.OnClickListener() {

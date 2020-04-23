@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Step2PsychBehavioural extends AppCompatActivity {
     private ImageView home;
@@ -84,6 +85,9 @@ public class Step2PsychBehavioural extends AppCompatActivity {
             }
         });
 
+        //FINDING COMPONENTS ONCE
+        progress = findViewById(R.id.txvQNo);
+
         //INSTANTIATE DB HELPER
         final DatabaseHelper databaseHelper = new DatabaseHelper(this);
 
@@ -125,8 +129,7 @@ public class Step2PsychBehavioural extends AppCompatActivity {
 
         //INCREASE QUESTION COUNT ANSWERED
         counter++;
-        progress = findViewById(R.id.txvQNo);
-        progress.setText(counter + "/3");
+        progress.setText("Question: " + counter + " of 3");
 
         //SET QUESTION
         setQ = databaseHelper.getQuestion();
@@ -162,9 +165,11 @@ public class Step2PsychBehavioural extends AppCompatActivity {
 
         submit.setEnabled(true);
         next.setEnabled(false);
+        View nextView = findViewById(R.id.btnNext);
+        nextView.setVisibility(View.INVISIBLE);
         tryAgain.setEnabled(false);
         View tryAgainView = findViewById(R.id.btnTryAgain);
-        tryAgainView.setVisibility(View.INVISIBLE);
+        tryAgainView.setVisibility(View.GONE);
 
 
         int correct = (int) Math.floor(Math.random() * 4);
@@ -208,31 +213,37 @@ public class Step2PsychBehavioural extends AppCompatActivity {
         //ALLOW GROUP TO BE ACCESSED
         group = findViewById(R.id.rgpOptions);
 
-        //DISABLE RETRY
-        optionA.setEnabled(false);
-        optionB.setEnabled(false);
-        optionC.setEnabled(false);
-        optionD.setEnabled(false);
 
-        next = findViewById(R.id.btnNext);
-        next.setEnabled(true);
 
         //VERIFY ANSWER
-        int checkedOption = group.getCheckedRadioButtonId();
-        selectedOption = findViewById(checkedOption);
-        Log.d(TAG, "CheckedOptionId: " + checkedOption);
-        Log.d(TAG, "Checked Option: " + selectedOption.getText());
+        try {
+            int checkedOption = group.getCheckedRadioButtonId();
+            selectedOption = findViewById(checkedOption);
+            Log.d(TAG, "CheckedOptionId: " + checkedOption);
+            Log.d(TAG, "Checked Option: " + selectedOption.getText());
 
-        if (checkedOption == btnId) {
-            feedback = findViewById(R.id.txvFeedback);
-            feedback.setText("Great Job!");
-            cCounter++;
-        } else {
-            feedback = findViewById(R.id.txvFeedback);
-            feedback.setText("Terrible!");
+            if (checkedOption == btnId) {
+                Toast.makeText(getApplicationContext(), "Great Work!", Toast.LENGTH_LONG).show();
+                cCounter++;
+            } else {
+                Toast.makeText(getApplicationContext(), "That wasn't quite right", Toast.LENGTH_LONG).show();
+            }
+
+            //DISABLE RETRY
+            optionA.setEnabled(false);
+            optionB.setEnabled(false);
+            optionC.setEnabled(false);
+            optionD.setEnabled(false);
+
+            next = findViewById(R.id.btnNext);
+            next.setEnabled(true);
+            View nextView = findViewById(R.id.btnNext);
+            nextView.setVisibility(View.VISIBLE);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.d(TAG, "submitCheck: You did not submit an option");
+            Toast.makeText(getApplicationContext(), "Please select an option first", Toast.LENGTH_LONG).show();
         }
-
-
 
         //IF QUIZ COMPLETED
         if (counter == 3) {
@@ -240,13 +251,14 @@ public class Step2PsychBehavioural extends AppCompatActivity {
             submit.setEnabled(false);
             next = findViewById(R.id.btnNext);
             next.setEnabled(false);
+            View nextView = findViewById(R.id.btnNext);
+            nextView.setVisibility(View.GONE);
             tryAgain = findViewById(R.id.btnTryAgain);
             tryAgain.setEnabled(true);
             View tryAgainView = findViewById(R.id.btnTryAgain);
             tryAgainView.setVisibility(View.VISIBLE);
 
-            score = findViewById(R.id.txvScore);
-            score.setText(cCounter + "/3");
+            Toast.makeText(getApplicationContext(), "Final Score: " + cCounter + "/3", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -283,11 +295,7 @@ public class Step2PsychBehavioural extends AppCompatActivity {
         View tryAgainView = findViewById(R.id.btnTryAgain);
         tryAgainView.setVisibility(View.INVISIBLE);
 
-        progress = findViewById(R.id.txvQNo);
-        progress.setText(counter + "/3");
 
-        score = findViewById(R.id.txvScore);
-        score.setText("");
-
+        progress.setText("Question: " + counter + " of 3");
     }
 }
