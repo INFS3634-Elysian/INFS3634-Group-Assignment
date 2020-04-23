@@ -17,6 +17,7 @@ import android.widget.TextView;
 public class OtherNetworkBlogFragment extends Fragment {
     private TextView blogText;
     private ImageView resImage;
+    private Button connect1;
 
     public OtherNetworkBlogFragment() {
         // Required empty public constructor
