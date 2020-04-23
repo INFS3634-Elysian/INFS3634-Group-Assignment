@@ -7,6 +7,15 @@
     android:background="#FFFFFF"
     tools:context=".Step1AppCv">
 
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="305dp"
+        android:layout_height="2dp"
+        android:background="@drawable/divider"
+        android:paddingLeft="29dp"
+        app:layout_constraintStart_toStartOf="@+id/txvQNo"
+        app:layout_constraintTop_toBottomOf="@+id/txvQNo" />
+
     <ImageView
         android:id="@+id/ivHome"
         android:layout_width="30dp"
@@ -88,13 +97,30 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
         android:layout_marginLeft="29dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
-        android:text="TextView"
+        android:textSize="15sp"
+        android:text="Question Content"
+        android:fontFamily="@font/regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvQNo" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/regular"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/light_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/rgpOptions"
+        app:layout_constraintTop_toBottomOf="@+id/rgpOptions" />
 
     <RadioGroup
         android:id="@+id/rgpOptions"
@@ -102,93 +128,79 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
         android:layout_marginLeft="29dp"
-        android:layout_marginTop="50dp"
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
+        android:layout_marginBottom="110dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvQuestion">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
             android:id="@+id/rbnOptionA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/regular"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/rbnOptionB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/regular"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/rbnOptionC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/regular"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/rbnOptionD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/regular"
             android:text="RadioButton" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btnTryAgain"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginLeft="29dp"
-        android:text="Submit"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/regular"
+        android:text="Try Again"
+        android:textAllCaps="false"
+        android:textColor="@color/light_gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/rgpOptions"
         app:layout_constraintTop_toBottomOf="@+id/rgpOptions" />
 
     <Button
         android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/regular"
         android:text="Next Question"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textAllCaps="false"
+        android:textColor="@color/light_gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/rgpOptions"
         app:layout_constraintTop_toBottomOf="@+id/rgpOptions" />
-
-    <TextView
-        android:id="@+id/txvFeedback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginRight="47dp"
-        android:text="Feedback"
-        app:layout_constraintEnd_toStartOf="@+id/btnNext"
-        app:layout_constraintStart_toEndOf="@+id/btnSubmit"
-        app:layout_constraintTop_toBottomOf="@+id/rgpOptions" />
-
-    <Button
-        android:id="@+id/btnTryAgain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="20dp"
-        android:text="Try Again"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
-
-    <TextView
-        android:id="@+id/txvScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="43dp"
-        android:text="Score"
-        app:layout_constraintStart_toEndOf="@+id/btnTryAgain"
-        app:layout_constraintTop_toBottomOf="@+id/txvFeedback" />
 
     <TextView
         android:id="@+id/txvQNo"
@@ -198,6 +210,8 @@
         android:layout_marginLeft="29dp"
         android:layout_marginTop="15dp"
         android:text="TextView"
+        android:fontFamily="@font/bold"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
