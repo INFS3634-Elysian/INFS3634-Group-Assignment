@@ -12,7 +12,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "behavioural.db";
 
-
     //DECLARING TABLE FOR BEHAVIOURAL QUIZ
     private static final String TABLE_NAME = "examples";
 
@@ -23,6 +22,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_OPTION2 = "option2";
     private static final String COLUMN_OPTION3 = "option3";
 
+    //DECLARING TABLE FOR ACHIEVEMENTS
+    private static final String TABLE_NAME_2 = "achievements";
+
+    private static final String COLUMN_ID_2 = "id";
+    private static final String COLUMN_PAGE = "page";
+    private static final String COLUMN_NAME = "name";
+    private static final String COLUMN_STATUS = "status";
+
     //INSTANTIATING OTHER VARIABLES
     private String question = "";
     private String answer = "";
@@ -30,6 +37,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private String option2 = "";
     private String option3 = "";
     private int holder;
+
+    //INSTANTIATING OTHER VARIABLES
+    private boolean status;
+    private String statusS;
 
     SQLiteDatabase database;
 
@@ -64,6 +75,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " +TABLE_NAME+ " ( " + COLUMN_QUESTION + ", " + COLUMN_ANSWER + ", " + COLUMN_OPTION1 + ", " + COLUMN_OPTION2 + ", " + COLUMN_OPTION3 + ") VALUES ('Whilst working as a graduate trainee at a small consulting firm you have noticed that there is a lot of useful research that is conducted in-house and on behalf of clients. You can see that this would benefit colleagues and clients alike in many ways but currently there is not an obvious way to disseminate this. You bring this to the attention of your manager and she suggests that you give this some thought and propose a way to improve practice. What would you do?', 'Suggest that the company could set up a ‘Research Forum’ whose remit is to ensure the successful sharing of research across the business with representatives from all relevant departments.', 'Suggest that you set up a webinar every 6 months where key people from the organisation are invited to share the findings from their recent research with other employees.', 'Suggest that the company runs a 2-day internal conference annually which has a direct focus on sharing research findings with all employees.', 'Suggest that an area is created on the company intranet where people are encouraged to upload the research that they undertake.')");
         db.execSQL("INSERT INTO " +TABLE_NAME+ " ( " + COLUMN_QUESTION + ", " + COLUMN_ANSWER + ", " + COLUMN_OPTION1 + ", " + COLUMN_OPTION2 + ", " + COLUMN_OPTION3 + ") VALUES ('You are working in a call centre for a major UK telecommunications company. You have received a call from a customer who has been waiting in for an engineer who has failed to arrive within the scheduled time slot. The customer is upset and is talking in a raised voice. What do you do?', 'Ask the customer to hold while you contact the engineer to establish where she is', 'Apologise to the customer and say you will arrange for a re-scheduled appointment.', 'Listen to the customer’s feedback and tell them that you can understand why they are upset and that it must be very inconvenient for them.', 'Explain that the engineer has a very busy schedule and it is difficult for her to always be on time but you’re sure she will arrive soon.')");
         db.execSQL("INSERT INTO " +TABLE_NAME+ " ( " + COLUMN_QUESTION + ", " + COLUMN_ANSWER + ", " + COLUMN_OPTION1 + ", " + COLUMN_OPTION2 + ", " + COLUMN_OPTION3 + ") VALUES ('You are a team leader in a customer contact centre. You just overheard an employee in your team telling a customer that they were “over-reacting” and that they needed to “get psychiatric help”. You are not sure what the customer’s call was about but now the call has finished and you have a chance to speak to the employee. What do you do?', 'Tell your employee that you will work with them to improve their performance over the next 3 months', 'Tell the employee that you have no option but to recommend their dismissal', 'Tell the employee to do it again', 'Ignore the employees behaviour and hope they will not repeat their mistakes on another occasion')");
+
+        db.execSQL("CREATE TABLE " + TABLE_NAME_2 + " ( " + COLUMN_ID_2 + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PAGE + " TEXT, " + COLUMN_NAME + " TEXT, " + COLUMN_STATUS + " TEXT)");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Main Page', 'Quiz Master', 'false')");
     }
 
     //DB AT UPGRADE; i.e generally unnecessary
@@ -140,5 +154,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
         return option3;
+    }
+
+    public boolean getAchievementStatus(String name) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT " + COLUMN_STATUS + " FROM " + TABLE_NAME_2 + " WHERE " + COLUMN_NAME + "= '" + name + "'", null);
+        if(cursor.moveToFirst()) {
+            do {
+                statusS = cursor.getString(cursor.getColumnIndex(COLUMN_STATUS));
+            } while (cursor.moveToNext());
+        }
+
+        boolean status = Boolean.parseBoolean(statusS);
+
+        return status;
+    }
+
+    public void setAchievementStatus(String aName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        db.execSQL("UPDATE " + TABLE_NAME_2 + " SET " + COLUMN_STATUS + " = 'true' WHERE " + COLUMN_NAME + "='" + aName + "'");
+
     }
 }

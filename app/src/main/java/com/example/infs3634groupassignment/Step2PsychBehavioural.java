@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -90,6 +92,25 @@ public class Step2PsychBehavioural extends AppCompatActivity {
 
         //INSTANTIATE DB HELPER
         final DatabaseHelper databaseHelper = new DatabaseHelper(this);
+
+        //SHOW ACHIEVEMENT
+        if (databaseHelper.getAchievementStatus("Quiz Master")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.atom);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("Science God");
+
+            Toast toast = new Toast(this);
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("Quiz Master");
+        }
 
         //CALLING FIRST INSTANCE OF QUESTION
         createQ();
