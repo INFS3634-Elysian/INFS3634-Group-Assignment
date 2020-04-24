@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Step6FirstDay extends AppCompatActivity {
 
@@ -30,6 +33,26 @@ public class Step6FirstDay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step6_first_day);
         setTitle("Step 6: First Day of Work");
+
+        final DatabaseHelper databaseHelper = new DatabaseHelper(this);
+        if (databaseHelper.getAchievementStatus("Completed: First Day")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.ach_firstday);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("Completed: First Day");
+
+            Toast toast = new Toast(this);
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("Completed: First Day");
+        }
+
         home = findViewById(R.id.ivHome);
         trophy = findViewById(R.id.ivTrophy);
         notebook = findViewById(R.id.ivNotebook);

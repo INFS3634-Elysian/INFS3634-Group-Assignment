@@ -6,9 +6,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Step4AcentreGroup extends AppCompatActivity {
 
@@ -29,6 +33,25 @@ public class Step4AcentreGroup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step4_acentre_group);
+
+        final DatabaseHelper databaseHelper = new DatabaseHelper(this);
+        if (databaseHelper.getAchievementStatus("Completed: Group Work")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.ach_groupwork);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("Completed: Group Work");
+
+            Toast toast = new Toast(this);
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("Completed: Group Work");
+        }
 
         recyclerView = findViewById(R.id.recyclerView);
         images = new int[]{R.drawable.ac_1, R.drawable.ac_2, R.drawable.ac_3, R.drawable.ac_4};

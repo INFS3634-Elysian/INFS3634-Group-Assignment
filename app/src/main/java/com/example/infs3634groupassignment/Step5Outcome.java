@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Step5Outcome extends AppCompatActivity {
     // Declaring variables that will be used in this activity
@@ -25,6 +28,27 @@ public class Step5Outcome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step5_outcome);
         setTitle("Step 5: Final Outcome");
+
+        final DatabaseHelper databaseHelper = new DatabaseHelper(this);
+        if (databaseHelper.getAchievementStatus("Completed: Outcomes")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.ach_outcome);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("Completed: Outcomes");
+
+            Toast toast = new Toast(this);
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("Completed: Outcomes");
+        }
+
+
         // Linking java and xml attributes
         home = findViewById(R.id.ivHome);
         trophy= findViewById(R.id.ivTrophy);

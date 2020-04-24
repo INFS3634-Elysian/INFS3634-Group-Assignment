@@ -81,6 +81,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Resume', 'Completed: Resumes', 'false')");
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('CV', 'Completed: Curriculum Vitae', 'false')");
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Behavioural', 'Completed: Behavioural Tests', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Cognitive', 'Completed: Cognitive Tests', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Numerical', 'Completed: Numerical Tests', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Video Interviews', 'Completed: Video Interviews', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Assessment Centre', 'Completed: Group Work', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Assessment Centre', 'Completed: Personal Interviews', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Outcome', 'Completed: Outcomes', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('First Day', 'Completed: First Day', 'false')");
+
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Home', 'Home, Sweet, Home', 'false')");
     }
 
     //DB AT UPGRADE; i.e generally unnecessary
@@ -159,6 +168,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return option3;
     }
 
+    //METHODS FOR ACHIEVEMENTS
     public boolean getAchievementStatus(String name) {
         SQLiteDatabase db = this.getReadableDatabase();
 

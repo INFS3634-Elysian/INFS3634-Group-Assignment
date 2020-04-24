@@ -23,6 +23,25 @@ public class MainActivity extends AppCompatActivity {
 
         this.deleteDatabase("behavioural.db");
 
+        final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+        if (databaseHelper.getAchievementStatus("The Journey Begins")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.ach_journey);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("The Journey Begins");
+
+            Toast toast = new Toast(getApplicationContext());
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("The Journey Begins");
+        }
+
 
 
         mButtonSignIn = findViewById(R.id.btnSignIn);
@@ -30,24 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Home.class));
-                final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
-                if (databaseHelper.getAchievementStatus("The Journey Begins")) {
 
-                } else {
-                    LayoutInflater inflater = getLayoutInflater();
-                    View view = inflater.inflate(R.layout.toast_layout,
-                            (ViewGroup)findViewById(R.id.relativeLayout1));
-                    ImageView image = view.findViewById(R.id.imvImage);
-                    image.setImageResource(R.drawable.ach_journey);
-                    TextView text = view.findViewById(R.id.textView2);
-                    text.setText("The Journey Begins");
-
-                    Toast toast = new Toast(getApplicationContext());
-                    toast.setView(view);
-                    toast.show();
-
-                    databaseHelper.setAchievementStatus("The Journey Begins");
-                }
             }
         });
     }
