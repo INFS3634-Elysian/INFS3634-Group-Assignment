@@ -42,5 +42,25 @@ public class Step2PsychCognitiveScore extends AppCompatActivity {
 
             databaseHelper.setAchievementStatus("Completed: Cognitive Tests");
         }
+
+        if (score == 15) {
+            if (databaseHelper.getAchievementStatus("A Cognitive Hero!")) {
+
+            } else {
+                LayoutInflater inflater = getLayoutInflater();
+                View view = inflater.inflate(R.layout.toast_layout,
+                        (ViewGroup)findViewById(R.id.relativeLayout1));
+                ImageView image = view.findViewById(R.id.imvImage);
+                image.setImageResource(R.drawable.ach_star);
+                TextView text = view.findViewById(R.id.textView2);
+                text.setText("A Cognitive Hero!");
+
+                Toast toast = new Toast(getApplicationContext());
+                toast.setView(view);
+                toast.show();
+
+                databaseHelper.setAchievementStatus("A Cognitive Hero!");
+            }
+        }
     }
 }

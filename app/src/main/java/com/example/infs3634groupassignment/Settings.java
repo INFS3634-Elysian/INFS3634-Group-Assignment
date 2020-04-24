@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Settings extends AppCompatActivity {
     // Declaring variables that will be used in this activity
@@ -79,6 +82,25 @@ public class Settings extends AppCompatActivity {
                         "<br /><b>Truman Ng</b> | Bachelor of Commerce and Bachelor of Information Systems at UNSW"
                 );
                 finalText2.setText(Html.fromHtml(text2));
+
+                final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+                if (databaseHelper.getAchievementStatus("Meet the team!")) {
+
+                } else {
+                    LayoutInflater inflater = getLayoutInflater();
+                    View view = inflater.inflate(R.layout.toast_layout,
+                            (ViewGroup)findViewById(R.id.relativeLayout1));
+                    ImageView image = view.findViewById(R.id.imvImage);
+                    image.setImageResource(R.drawable.ach_team);
+                    TextView text = view.findViewById(R.id.textView2);
+                    text.setText("Meet the team!");
+
+                    Toast toast = new Toast(getApplicationContext());
+                    toast.setView(view);
+                    toast.show();
+
+                    databaseHelper.setAchievementStatus("Meet the team!");
+                }
             }
         });
 
@@ -140,5 +162,24 @@ public class Settings extends AppCompatActivity {
                 startActivity(new Intent(Settings.this, Settings.class));
             }
         });
+
+        final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+        if (databaseHelper.getAchievementStatus("Set your settings")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.ach_settings);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("Set your settings");
+
+            Toast toast = new Toast(getApplicationContext());
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("Set your settings");
+        }
     }
 }

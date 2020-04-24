@@ -90,6 +90,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('First Day', 'Completed: First Day', 'false')");
 
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Home', 'Home, Sweet, Home', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Achievement', 'Achievements, Achievements so many...', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Notebook', 'Time to take some notes', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Profile', 'Who am I?', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Settings', 'Set your settings', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Settings', 'Meet the team!', 'false')");
+
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Behavioural', 'A Behavioural Hero!', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Cognitive', 'A Cognitive Hero!', 'false')");
+
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Offer', 'You did it!', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Reject', 'Life goes on...', 'false')");
     }
 
     //DB AT UPGRADE; i.e generally unnecessary

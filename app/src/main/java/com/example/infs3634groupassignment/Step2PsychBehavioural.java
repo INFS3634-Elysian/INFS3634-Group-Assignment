@@ -280,6 +280,27 @@ public class Step2PsychBehavioural extends AppCompatActivity {
             tryAgainView.setVisibility(View.VISIBLE);
 
             Toast.makeText(getApplicationContext(), "Final Score: " + cCounter + "/3", Toast.LENGTH_LONG).show();
+
+            if (cCounter == 3) {
+                final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+                if (databaseHelper.getAchievementStatus("A Behavioural Hero!")) {
+
+                } else {
+                    LayoutInflater inflater = getLayoutInflater();
+                    View view = inflater.inflate(R.layout.toast_layout,
+                            (ViewGroup)findViewById(R.id.relativeLayout1));
+                    ImageView image = view.findViewById(R.id.imvImage);
+                    image.setImageResource(R.drawable.ach_star);
+                    TextView text = view.findViewById(R.id.textView2);
+                    text.setText("A Behavioural Hero!");
+
+                    Toast toast = new Toast(getApplicationContext());
+                    toast.setView(view);
+                    toast.show();
+
+                    databaseHelper.setAchievementStatus("A Behavioural Hero!");
+                }
+            }
         }
     }
 

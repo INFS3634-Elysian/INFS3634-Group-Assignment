@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Achievement extends AppCompatActivity {
     private ImageView home;
@@ -59,5 +63,24 @@ public class Achievement extends AppCompatActivity {
                 startActivity(new Intent(Achievement.this, Settings.class));
             }
         });
+
+        final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+        if (databaseHelper.getAchievementStatus("Achievements, so many Achievements...")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.ach_achievements);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("Achievements, Achievements so many...");
+
+            Toast toast = new Toast(getApplicationContext());
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("Achievements, Achievements so many...");
+        }
     }
 }
