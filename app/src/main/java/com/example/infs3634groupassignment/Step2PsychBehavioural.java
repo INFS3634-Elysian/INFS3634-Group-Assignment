@@ -94,22 +94,22 @@ public class Step2PsychBehavioural extends AppCompatActivity {
         final DatabaseHelper databaseHelper = new DatabaseHelper(this);
 
         //SHOW ACHIEVEMENT
-        if (databaseHelper.getAchievementStatus("Quiz Master")) {
+        if (databaseHelper.getAchievementStatus("Completed: Behavioural Tests")) {
 
         } else {
             LayoutInflater inflater = getLayoutInflater();
             View view = inflater.inflate(R.layout.toast_layout,
                     (ViewGroup)findViewById(R.id.relativeLayout1));
             ImageView image = view.findViewById(R.id.imvImage);
-            image.setImageResource(R.drawable.atom);
+            image.setImageResource(R.drawable.ach_behavioural);
             TextView text = view.findViewById(R.id.textView2);
-            text.setText("Science God");
+            text.setText("Completed: Behavioural Tests");
 
             Toast toast = new Toast(this);
             toast.setView(view);
             toast.show();
 
-            databaseHelper.setAchievementStatus("Quiz Master");
+            databaseHelper.setAchievementStatus("Completed: Behavioural Tests");
         }
 
         //CALLING FIRST INSTANCE OF QUESTION

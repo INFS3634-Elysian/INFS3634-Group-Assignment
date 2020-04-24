@@ -77,7 +77,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " +TABLE_NAME+ " ( " + COLUMN_QUESTION + ", " + COLUMN_ANSWER + ", " + COLUMN_OPTION1 + ", " + COLUMN_OPTION2 + ", " + COLUMN_OPTION3 + ") VALUES ('You are a team leader in a customer contact centre. You just overheard an employee in your team telling a customer that they were “over-reacting” and that they needed to “get psychiatric help”. You are not sure what the customer’s call was about but now the call has finished and you have a chance to speak to the employee. What do you do?', 'Tell your employee that you will work with them to improve their performance over the next 3 months', 'Tell the employee that you have no option but to recommend their dismissal', 'Tell the employee to do it again', 'Ignore the employees behaviour and hope they will not repeat their mistakes on another occasion')");
 
         db.execSQL("CREATE TABLE " + TABLE_NAME_2 + " ( " + COLUMN_ID_2 + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PAGE + " TEXT, " + COLUMN_NAME + " TEXT, " + COLUMN_STATUS + " TEXT)");
-        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Main Page', 'Quiz Master', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Main', 'The Journey Begins', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Resume', 'Completed: Resumes', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('CV', 'Completed: Curriculum Vitae', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Behavioural', 'Completed: Behavioural Tests', 'false')");
     }
 
     //DB AT UPGRADE; i.e generally unnecessary
