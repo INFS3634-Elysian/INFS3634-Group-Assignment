@@ -30,33 +30,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_NAME = "name";
     private static final String COLUMN_STATUS = "status";
 
-    //DECLARING TABLE FOR NUMERICALS
-    private static final String TABLE_NAME_3 = "Numericals";
-
-    private static final String COLUMN_ID_3 = "id";
-    private static final String COLUMN_QUESTION_3 = "question";
-    private static final String COLUMN_ANSWER_3 = "answer";
-    private static final String COLUMN_OPTION1_3 = "option1";
-    private static final String COLUMN_OPTION2_3 = "option2";
-    private static final String COLUMN_OPTION3_3 = "option3";
-
     //INSTANTIATING OTHER VARIABLES
     private String question = "";
     private String answer = "";
     private String option1 = "";
     private String option2 = "";
     private String option3 = "";
-    private String questionNumerical = "";
-    private String answerNumerical = "";
-    private String option1Numerical = "";
-    private String option2Numerical = "";
-    private String option3Numerical = "";
     private int holder;
 
     //INSTANTIATING OTHER VARIABLES
     private boolean status;
     private String statusS;
-    private String statusSNumerical;
+    private boolean current;
+    private String currentS;
 
     SQLiteDatabase database;
 
@@ -106,7 +92,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('First Day', 'Completed: First Day', 'false')");
 
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Home', 'Home, Sweet, Home', 'false')");
-        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Achievement', 'Achievements, Achievements so many...', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Achievement', 'Achievements, so many Achievements...', 'false')");
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Notebook', 'Time to take some notes', 'false')");
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Profile', 'Who am I?', 'false')");
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Settings', 'Set your settings', 'false')");
@@ -117,21 +103,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Offer', 'You did it!', 'false')");
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Reject', 'Life goes on...', 'false')");
-        db.execSQL("CREATE TABLE "+TABLE_NAME_3+" ( "+COLUMN_ID_3 +" INTEGER PRIMARY KEY AUTOINCREMENT, "+COLUMN_QUESTION_3 +" TEXT, "+COLUMN_ANSWER_3 +" TEXT, "+COLUMN_OPTION1_3+ " TEXT, "+COLUMN_OPTION2_3+ " TEXT, "+COLUMN_OPTION3_3+ " TEXT)");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('Which game was played by a higher percentage of females than males in 2020?', 'Clash of Clans' ,'League of legends ', 'Farmville', 'None of the above')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the combined female readership percentage of the Echo360, the Clash of Clans, and League of legends for female students in 2020?', '26.9%', '27.1%', '26.7%', '26.5%')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the most popular game in 2019?', 'Dota', 'Animal Crossing', 'League of Legends', 'Farmville')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('Which game was played by a higher percentage of males than females in 2020?', 'League of legends ', 'Farmville', 'Dota ', 'All of the above')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the combined male readership percentage of Animal Crossing, Dota, and League of legends for male students in 2020?', '29.8%', '27.1%', '30.2%', '28.4%')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the most popular game in 2020? ', 'Animal Crossing', 'League of Legends', 'Farmville', 'Clash of Clans')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the least popular game in 2020? ', 'Farmville', 'Dota', 'Clash of Clans', 'Echo 360')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the most popular game for males in 2020?', 'League of Legends', 'Farmville', 'Dota ', 'Echo 360')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the most popular game for females in 2020?', 'Animal Crossing', 'Barbie', 'Dota ', 'Echo 360')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the least popular game for males in 2020?', 'Farmville', 'Dota', 'Clash of Clans', 'Echo 360')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the least popular game for females in 2020?', 'None of the above', 'Animal Crossing', 'League of Legends', 'Echo 360')");
-        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('The climate induced by COVID-19 has sparked an increase in playership for Animal Crossing by 20%. How much bigger is total playership for animal crossing than league of legends? (2 Decimal Places)', '2.05', '2.04', '0.49', '0.50')");
-
-
     }
 
     //DB AT UPGRADE; i.e generally unnecessary
@@ -221,7 +192,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
-        boolean status = Boolean.parseBoolean(statusS);
+        status = Boolean.parseBoolean(statusS);
 
         return status;
     }
@@ -233,73 +204,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    //METHODS FOR NUMERICAL QUIZZES; FUNCTIONS: returns question and possible options
-    public String getQuestionNumerical() {
-        SQLiteDatabase db = this.getReadableDatabase();
+    public boolean getAchievementProgress(int id) {
+        SQLiteDatabase db= this.getReadableDatabase();
 
-        int retrieve = (int) Math.floor(Math.random() * 10) + 1;
-        holder = retrieve;
-
-        Cursor cursor = db.rawQuery("SELECT "+COLUMN_QUESTION_3+ " FROM " +TABLE_NAME_3+ " WHERE " +COLUMN_ID_3+ "=" + retrieve,null);
+        Cursor cursor = db.rawQuery("SELECT " + COLUMN_STATUS + " FROM " + TABLE_NAME_2 + " WHERE " + COLUMN_ID_2 + " = " + id, null);
         if(cursor.moveToFirst()) {
             do {
-                questionNumerical = cursor.getString(cursor.getColumnIndex(COLUMN_QUESTION_3));
+                currentS = cursor.getString(cursor.getColumnIndex(COLUMN_STATUS));
             } while (cursor.moveToNext());
         }
 
-        return questionNumerical;
+        current = Boolean.parseBoolean(currentS);
+
+        return current;
     }
-
-    public String getAnswerNumerical() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = db.rawQuery("SELECT "+COLUMN_ANSWER_3+ " FROM " +TABLE_NAME_3+ " WHERE " +COLUMN_ID_3+ "=" + holder,null);
-        if(cursor.moveToFirst()) {
-            do {
-                answerNumerical = cursor.getString(cursor.getColumnIndex(COLUMN_ANSWER_3));
-            } while (cursor.moveToNext());
-        }
-
-        return answerNumerical;
-    }
-
-    public String getOption1Numerical() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = db.rawQuery("SELECT "+COLUMN_OPTION1_3+ " FROM " +TABLE_NAME_3+ " WHERE " +COLUMN_ID_3+ "=" + holder,null);
-        if(cursor.moveToFirst()) {
-            do {
-                option1Numerical = cursor.getString(cursor.getColumnIndex(COLUMN_OPTION1_3));
-            } while (cursor.moveToNext());
-        }
-
-        return option1Numerical;
-    }
-
-    public String getOption2Numerical() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = db.rawQuery("SELECT "+COLUMN_OPTION2_3+ " FROM " +TABLE_NAME_3+ " WHERE " +COLUMN_ID_3+ "=" + holder,null);
-        if(cursor.moveToFirst()) {
-            do {
-                option2Numerical = cursor.getString(cursor.getColumnIndex(COLUMN_OPTION2_3));
-            } while (cursor.moveToNext());
-        }
-
-        return option2Numerical;
-    }
-
-    public String getOption3Numerical() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = db.rawQuery("SELECT "+COLUMN_OPTION3_3+ " FROM " +TABLE_NAME_3+ " WHERE " +COLUMN_ID_3+ "=" + holder,null);
-        if(cursor.moveToFirst()) {
-            do {
-                option3Numerical = cursor.getString(cursor.getColumnIndex(COLUMN_OPTION3_3));
-            } while (cursor.moveToNext());
-        }
-
-        return option3Numerical;
-    }
-
 }
