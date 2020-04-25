@@ -41,6 +41,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //INSTANTIATING OTHER VARIABLES
     private boolean status;
     private String statusS;
+    private boolean current;
+    private String currentS;
 
     SQLiteDatabase database;
 
@@ -90,7 +92,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('First Day', 'Completed: First Day', 'false')");
 
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Home', 'Home, Sweet, Home', 'false')");
-        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Achievement', 'Achievements, Achievements so many...', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Achievement', 'Achievements, so many Achievements...', 'false')");
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Notebook', 'Time to take some notes', 'false')");
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Profile', 'Who am I?', 'false')");
         db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Settings', 'Set your settings', 'false')");
@@ -190,7 +192,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
-        boolean status = Boolean.parseBoolean(statusS);
+        status = Boolean.parseBoolean(statusS);
 
         return status;
     }
@@ -200,5 +202,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL("UPDATE " + TABLE_NAME_2 + " SET " + COLUMN_STATUS + " = 'true' WHERE " + COLUMN_NAME + "='" + aName + "'");
 
+    }
+
+    public boolean getAchievementProgress(int id) {
+        SQLiteDatabase db= this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT " + COLUMN_STATUS + " FROM " + TABLE_NAME_2 + " WHERE " + COLUMN_ID_2 + " = " + id, null);
+        if(cursor.moveToFirst()) {
+            do {
+                currentS = cursor.getString(cursor.getColumnIndex(COLUMN_STATUS));
+            } while (cursor.moveToNext());
+        }
+
+        current = Boolean.parseBoolean(currentS);
+
+        return current;
     }
 }
