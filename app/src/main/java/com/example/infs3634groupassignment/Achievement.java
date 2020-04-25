@@ -32,6 +32,7 @@ public class Achievement extends AppCompatActivity {
         setContentView(R.layout.activity_achievement);
         setTitle("Achievements");
 
+        //NavBar Functions
         home = findViewById(R.id.ivHome);
         trophy= findViewById(R.id.ivTrophy);
         notebook = findViewById(R.id.ivNotebook);
@@ -73,6 +74,8 @@ public class Achievement extends AppCompatActivity {
             }
         });
 
+        //Instantiation of DBHelper and Achievement
+
         final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
         if (databaseHelper.getAchievementStatus("Achievements, so many Achievements...")) {
 
@@ -92,6 +95,7 @@ public class Achievement extends AppCompatActivity {
             databaseHelper.setAchievementStatus("Achievements, so many Achievements...");
         }
 
+        //Measure Individual and Overall Progress of achievements
         progress = findViewById(R.id.pgbAchProg);
         progress.setMax(21);
 
@@ -276,7 +280,7 @@ public class Achievement extends AppCompatActivity {
             TextView txv = findViewById(R.id.txv13_1);
             txv.setText("Achievements, so many");
             TextView txv2 = findViewById(R.id.txv13_2);
-            txv2.setText("Opened the this.(Page)");
+            txv2.setText("Opened the Achievements Page");
         } else {
             ImageView imv = (ImageView) findViewById(R.id.imv13);
             imv.setImageDrawable(getResources().getDrawable(R.drawable.ach_lock_l));

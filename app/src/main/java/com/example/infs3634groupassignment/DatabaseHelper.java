@@ -22,7 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_OPTION2 = "option2";
     private static final String COLUMN_OPTION3 = "option3";
 
-    //DECLARING TABLE FOR NUMERICALS
+    //DECLARING TABLE FOR NUMERICAL QUIZ
     private static final String TABLE_NAME_3 = "Numericals";
 
     private static final String COLUMN_ID_3 = "id";

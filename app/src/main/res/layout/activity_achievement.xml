@@ -641,7 +641,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/bold"
-                    android:text="Achievements, so many Achievements..."
+                    android:text="Achievements, so many"
                     android:textSize="16dp"
                     app:layout_constraintStart_toEndOf="@+id/imv13"
                     app:layout_constraintTop_toTopOf="parent" />
