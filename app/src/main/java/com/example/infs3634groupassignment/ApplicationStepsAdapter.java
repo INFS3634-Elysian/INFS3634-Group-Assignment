@@ -40,8 +40,8 @@ public class ApplicationStepsAdapter extends RecyclerView.Adapter<ApplicationSte
         }
 
         @Override
-        public void onClick(View view){
-            mListener.onClick(view, getAdapterPosition());
+            public void onClick(View view){
+                mListener.onClick(view, getAdapterPosition());
         }
     }
 
