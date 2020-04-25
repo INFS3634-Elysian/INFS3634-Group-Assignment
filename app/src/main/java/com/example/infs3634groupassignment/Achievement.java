@@ -276,7 +276,7 @@ public class Achievement extends AppCompatActivity {
             TextView txv = findViewById(R.id.txv13_1);
             txv.setText("Achievements, so many");
             TextView txv2 = findViewById(R.id.txv13_2);
-            txv2.setText("Opened the this.(Page)");
+            txv2.setText("Opened the Achievements Page");
         } else {
             ImageView imv = (ImageView) findViewById(R.id.imv13);
             imv.setImageDrawable(getResources().getDrawable(R.drawable.ach_lock_l));
