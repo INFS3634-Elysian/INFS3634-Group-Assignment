@@ -123,7 +123,7 @@ public class Settings extends AppCompatActivity {
                 finalText.setVisibility(View.VISIBLE);
                 finalText.setText("My Account");
                 divider.setVisibility(View.VISIBLE);
-                finalText2.setText("Your Account Name: Hamid\n" +
+                finalText2.setText("Your Account Name: Hamid Samani\n" +
                         "Your password: **********");
             }
         });
