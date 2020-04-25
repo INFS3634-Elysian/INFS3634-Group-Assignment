@@ -65,8 +65,6 @@ public class Step2PsychCognitive extends AppCompatActivity {
         });
 
 
-
-
         btn_answer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -230,9 +228,6 @@ public class Step2PsychCognitive extends AppCompatActivity {
                 btn_answer1.setText(list.get(fourthButton).getName());
                 break;
         }
-
-
-
 
     }
 

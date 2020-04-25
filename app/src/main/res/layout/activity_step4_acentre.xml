@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Step4AcentreGroup"
-    >
+    tools:context=".Step4Acentre"
+   >
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -30,16 +30,15 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/bold"
-                android:text="Group work at assessment centres"
+                android:text="What is an assessment centre?"
                 android:textSize="22sp" />
 
             <View
                 android:id="@+id/d0"
-                android:layout_width="340dp"
+                android:layout_width="320dp"
                 android:layout_height="2dp"
                 android:layout_marginLeft="29dp"
                 android:layout_marginStart="29dp"
-
                 android:background="@drawable/divider" />
 
             <TextView
@@ -52,7 +51,7 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="Group work is very common in assessment centres during the graduate selection process. During the group tasks, the assessors will be evaluating your problem-solving and communication skills and observing how you work in a team."
+                android:text="If you succeed in your video interview, the next step in the recruitment process will be attending an assessment centre!"
                 android:textSize="16sp" />
 
             <TextView
@@ -65,31 +64,11 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="See our top 3 tips below on how to navigate your group task!"
+                android:text="Put simply, an assessment centre involves completing a variety of activities such as group work and an in person interview."
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tv1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="29dp"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/bold"
-                android:text="1. Be a team player"
-                android:textSize="22sp" />
-
-            <View
-                android:id="@+id/d1"
-                android:layout_width="200dp"
-                android:layout_height="2dp"
-                android:layout_marginLeft="29dp"
-                android:layout_marginStart="29dp"
-                android:background="@drawable/divider" />
-
-
-            <TextView
-                android:id="@+id/tv1a"
+                android:id="@+id/tv0d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="23dp"
@@ -98,11 +77,11 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="Employers are looking for suitable candidates for their team so they want are looking for team players!"
+                android:text="Learn more about what kind of activities to expect at an assessment centre below! "
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tv1b"
+                android:id="@+id/tv0e"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="23dp"
@@ -111,169 +90,91 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="Whilst taking the lead will get you noticed, make sure you don’t come off as being bossy. Be friendly, collaborative and encourage quieter members to contribute to the discussion"
+                android:textSize="16sp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+                <Button
+                    android:id="@+id/btnGroupwork"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginRight="36dp"
+                    android:layout_marginStart="75dp"
+                    android:background="@drawable/buttongray"
+                    android:fontFamily="@font/regular"
+                    android:text="Group Work"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/btnInterview"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <Button
+                    android:id="@+id/btnInterview"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="75dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="75dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@drawable/buttongray"
+                    android:fontFamily="@font/regular"
+                    android:text="Interview"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnGroupwork"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv0c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
                 android:textSize="16sp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="29dp"
-                android:layout_marginStart="29dp"
-
-                android:layout_marginRight="23dp"
-                android:layout_marginTop="15dp">
-
-                <ImageView
-                    android:id="@+id/iv1"
-                    android:layout_width="300dp"
-                    android:layout_height="150dp"
-                    android:background="@drawable/imageview"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ac_teamplayer" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="29dp"
-                android:layout_marginStart="29dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="15dp"
-                android:fontFamily="@font/bold"
-                android:text="2. Come prepared!"
-                android:textSize="22sp" />
-
-            <View
-                android:id="@+id/d2"
-                android:layout_width="190dp"
-                android:layout_height="2dp"
-                android:layout_marginLeft="29dp"
-                android:layout_marginStart="29dp"
-
-                android:background="@drawable/divider"
-                android:paddingLeft="29dp" />
-
-            <TextView
-                android:id="@+id/tv2a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="23dp"
-                android:layout_marginLeft="29dp"
-                android:layout_marginRight="23dp"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/regular"
-                android:text="Ahead of the assessment centre, complete research online and see whether you can find any information on the type of group tasks the company may have.
-"               android:textSize="16sp" />
-
-
-            <TextView
-                android:id="@+id/tv2b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="23dp"
-                android:layout_marginLeft="29dp"
-                android:layout_marginRight="23dp"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/regular"
-                android:text="Some companies may even provide you with a case study before the assessment centre. Make sure you know the case study inside-out and have a strong understanding of what the assessors expected you to complete before assessment centre day"
-                android:textSize="16sp" />
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="29dp"
-                android:layout_marginRight="23dp"
-                android:layout_marginTop="15dp">
+                >
 
                 <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="300dp"
-                    android:layout_height="150dp"
+                    android:id="@+id/ivCongrats"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
                     android:background="@drawable/imageview"
                     android:scaleType="centerCrop"
+                    android:src="@drawable/ac_main"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ac_comeprepared" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/tv3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="29dp"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/bold"
-                android:text="3. Act professionally"
-                android:textSize="22sp" />
-
-            <View
-                android:id="@+id/d3"
-                android:layout_width="210dp"
-                android:layout_height="2dp"
-                android:layout_marginLeft="29dp"
-                android:layout_marginStart="29dp"
-
-                android:background="@drawable/divider" />
-
-
-
-            <TextView
-                android:id="@+id/tv3a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="23dp"
-                android:layout_marginLeft="29dp"
-                android:layout_marginRight="23dp"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/regular"
-                android:text="Whilst you want your personality to shine and be notified by assessors, it’s important that you behave like the employees of the company. Make sure you dress appropriately and arrive punctually on the day."
-                android:textSize="16sp" />
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="29dp"
-                android:layout_marginStart="29dp"
-
-                android:layout_marginRight="23dp"
-                android:layout_marginTop="15dp">
-
-                <ImageView
-                    android:id="@+id/iv123"
-                    android:layout_width="300dp"
-                    android:layout_height="150dp"
-                    android:background="@drawable/imageview"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ac_actprofessionally" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             <TextView
                 android:id="@+id/tv"
                 android:layout_width="match_parent"
                 android:layout_height="60dp" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@id/recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:scrollbars="vertical"
-                app:layout_constraintTop_toTopOf="@+id/constraintLayout"
-                tools:layout_editor_absoluteX="-200dp" />
 
         </LinearLayout>
     </ScrollView>
