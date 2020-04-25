@@ -37,8 +37,8 @@ public class ApplicationDatabase {
         applicationDatabase.add(new ApplicationDatabase("Step 2: Psychometric Test- Cognitive","home_cognitive"));
         applicationDatabase.add(new ApplicationDatabase("Step 2: Psychometric Test- Numerical","home_numerical"));
         applicationDatabase.add(new ApplicationDatabase("Step 3: Video Interview", "home_video"));
-        applicationDatabase.add(new ApplicationDatabase("Step 4: Assessment Centre- Group Work","home_groupwork"));
-        applicationDatabase.add(new ApplicationDatabase("Step 4: Assessment Centre- Interview","home_interview"));
+        applicationDatabase.add(new ApplicationDatabase("Step 4: Assessment Centre","home_groupwork"));
+     //   applicationDatabase.add(new ApplicationDatabase("Step 4: Assessment Centre- Interview","home_interview"));
         applicationDatabase.add(new ApplicationDatabase("Step 5: Final Outcome","home_outcome"));
         applicationDatabase.add(new ApplicationDatabase("Step 6: First Day of Work", "home_firstday"));
         applicationDatabase.add(new ApplicationDatabase("Networking", "home_networking"));

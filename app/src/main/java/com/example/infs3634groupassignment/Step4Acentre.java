@@ -19,7 +19,6 @@ public class Step4Acentre extends AppCompatActivity {
 
     private Button groupwork;
     private Button interview;
-    private TextView summary;
     @Override
 
 
@@ -34,10 +33,7 @@ public class Step4Acentre extends AppCompatActivity {
         settings = findViewById(R.id.ivSettings);
         groupwork = findViewById(R.id.btnGroupwork);
         interview =findViewById(R.id.btnInterview);
-        summary = findViewById(R.id.tvSummary);
 
-   String text1 = ("After weeks (and perhaps even <b>months</b>) of hard work spent on polishing your resume, completing psychometric tests and attending interviews, <b>you are finally contacted by your recruiter...</b>");
-   summary.setText(Html.fromHtml(text1));
 
         // Directing users to a specific page depending on which icon they click on the navigation bar
         home.setOnClickListener(new View.OnClickListener() {

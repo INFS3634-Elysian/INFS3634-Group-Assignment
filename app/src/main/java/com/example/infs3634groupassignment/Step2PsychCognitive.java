@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class Step2PsychCognitive extends AppCompatActivity {
     private ImageView notebook;
     private ImageView profile;
     private ImageView settings;
+    private TextView txvQNo;
 
     Button btn_answer1, btn_answer2, btn_answer3, btn_answer4;
 
@@ -30,7 +32,7 @@ public class Step2PsychCognitive extends AppCompatActivity {
     Random r;
 
     int turn = 1;
-    private int score;
+    private int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,7 @@ public class Step2PsychCognitive extends AppCompatActivity {
         btn_answer2 = findViewById(R.id.btn_answer2);
         btn_answer3 = findViewById(R.id.btn_answer3);
         btn_answer4 =  findViewById(R.id.btn_answer4);
+        txvQNo = findViewById(R.id.txvQNo);
 
         list = new ArrayList<>();
         for(int i = 0; i < new Step2PsychCognitiveData().answers.length; i++) {
@@ -139,6 +142,7 @@ public class Step2PsychCognitive extends AppCompatActivity {
 
     private void newQuestion(int number) {
         iv_face.setImageResource(list.get(number - 1).getImage());
+        txvQNo.setText("Question: " + number + " of 15");
 
         //randomise button with correct answer
         int correct_answer = r.nextInt(4) + 1;
@@ -236,9 +240,11 @@ public class Step2PsychCognitive extends AppCompatActivity {
         if (btn_answer.getText().toString().equalsIgnoreCase(list.get(turn - 1).getName())) {
             Toast.makeText(Step2PsychCognitive.this, "Correct!", Toast.LENGTH_SHORT).show();
 
+            score++;
+
             if(turn < list.size()) {
                 turn++;
-                score++;
+                //score++;
                 newQuestion(turn);
             } else {
                 Toast.makeText(Step2PsychCognitive.this, "You have finished the cognitive test ", Toast.LENGTH_SHORT).show();
@@ -255,7 +261,7 @@ public class Step2PsychCognitive extends AppCompatActivity {
                 turn++;
                 newQuestion(turn);
             } else {
-                Toast.makeText(Step2PsychCognitive.this, "You have finished the cognitive test ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Step2PsychCognitive.this, "You have finished the test ", Toast.LENGTH_SHORT).show();
                 Intent Step2PsychCognitiveScoreIntent = new Intent(this,Step2PsychCognitiveScore.class);
                 Step2PsychCognitiveScoreIntent.putExtra("score",score);
                 startActivity(Step2PsychCognitiveScoreIntent);

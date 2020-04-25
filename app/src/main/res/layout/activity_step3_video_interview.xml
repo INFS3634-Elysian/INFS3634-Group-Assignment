@@ -83,11 +83,10 @@
                     android:id="@+id/imageView"
                     android:layout_width="300dp"
                     android:layout_height="160dp"
-                    android:background="@drawable/imageview"
                     android:scaleType="centerCrop"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/interview" />
+                    app:srcCompat="@drawable/video_interview" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

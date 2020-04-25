@@ -22,14 +22,63 @@ public class Home extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
+    private ImageView home;
+    private ImageView trophy;
+    private ImageView notebook;
+    private ImageView profile;
+    private ImageView settings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         mRecyclerView = (RecyclerView) findViewById(R.id.rvList);
+        home = findViewById(R.id.ivHome);
+        trophy= findViewById(R.id.ivTrophy);
+        notebook = findViewById(R.id.ivNotebook);
+        profile = findViewById(R.id.ivProfile);
+        settings = findViewById(R.id.ivSettings);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager= new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
+
+
+        // Directing users to a specific page depending on which icon they click on the navigation bar
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, Home.class));
+            }
+        });
+
+        trophy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, Achievement.class));
+            }
+        });
+
+        notebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, Notebook.class));
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, Profile.class));
+            }
+        });
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, Settings.class));
+            }
+        });
+
         ApplicationStepsAdapter.RecyclerViewClickListener listener = new ApplicationStepsAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View view, int position) {
@@ -81,7 +130,7 @@ public class Home extends AppCompatActivity {
             intent = new Intent(this, Step3VideoInterview.class);
             startActivity(intent);
         } else if (position == 6) {
-            intent = new Intent(this, Step4AcentreGroup.class);
+            intent = new Intent(this, Step4Acentre.class);
             startActivity(intent);
         } else if (position == 7) {
             intent = new Intent(this, Step4AcentreInterview.class);
