@@ -52,7 +52,7 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="Group work is very common in assessment centres during the graduate selection process. During the group tasks, the assessors will be evaluating your problem-solving and communication skills and observing how you work in a team."
+                android:text="During the group tasks, the assessors will be evaluating your problem-solving and communication skills and observing how you work in a team."
                 android:textSize="16sp" />
 
             <TextView
@@ -98,7 +98,7 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="Employers are looking for suitable candidates for their team so they want are looking for team players!"
+                android:text="Whilst taking the lead will get you noticed, it is important to remember that employers are looking for a suitable candidate that is a team player."
                 android:textSize="16sp" />
 
             <TextView
@@ -111,7 +111,7 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="Whilst taking the lead will get you noticed, make sure you don’t come off as being bossy. Be friendly, collaborative and encourage quieter members to contribute to the discussion"
+                android:text="Be friendly, collaborative and encourage quieter members to contribute to the discussion"
                 android:textSize="16sp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -166,8 +166,8 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="Ahead of the assessment centre, complete research online and see whether you can find any information on the type of group tasks the company may have.
-"               android:textSize="16sp" />
+                android:text="Ahead of the assessment centre, complete research online and see whether you can find any information on the type of group tasks the company may have."
+                android:textSize="16sp" />
 
 
             <TextView
@@ -180,7 +180,7 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="Some companies may even provide you with a case study before the assessment centre. Make sure you know the case study inside-out and have a strong understanding of what the assessors expected you to complete before assessment centre day"
+                android:text="Make sure you have a song understanding of what the assessors expected you to complete before assessment centre day"
                 android:textSize="16sp" />
 
 
@@ -260,6 +260,16 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
+                android:text="Check out the articles below for more tips!"
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/tv"
