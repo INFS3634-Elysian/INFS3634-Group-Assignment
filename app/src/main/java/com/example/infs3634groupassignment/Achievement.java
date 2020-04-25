@@ -32,6 +32,7 @@ public class Achievement extends AppCompatActivity {
         setContentView(R.layout.activity_achievement);
         setTitle("Achievements");
 
+        //NavBar Functions
         home = findViewById(R.id.ivHome);
         trophy= findViewById(R.id.ivTrophy);
         notebook = findViewById(R.id.ivNotebook);
@@ -73,6 +74,8 @@ public class Achievement extends AppCompatActivity {
             }
         });
 
+        //Instantiation of DBHelper and Achievement
+
         final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
         if (databaseHelper.getAchievementStatus("Achievements, so many Achievements...")) {
 
@@ -92,6 +95,7 @@ public class Achievement extends AppCompatActivity {
             databaseHelper.setAchievementStatus("Achievements, so many Achievements...");
         }
 
+        //Measure Individual and Overall Progress of achievements
         progress = findViewById(R.id.pgbAchProg);
         progress.setMax(21);
 
