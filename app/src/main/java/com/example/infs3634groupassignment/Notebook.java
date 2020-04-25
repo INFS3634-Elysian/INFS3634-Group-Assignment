@@ -93,7 +93,10 @@ public class Notebook extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                if((heading.getText().toString() != null) && (body.getText().toString() != null)){
+                if ((heading.getText().toString().equals("Heading")) && (body.getText().toString().equals("Start typing your notes!"))){
+                    Toast.makeText(getApplicationContext(), "There's nothing to save!", Toast.LENGTH_LONG).show();
+                }
+                else if((heading.getText().toString() != null) && (body.getText().toString() != null)){
                     makeTag(heading.getText().toString());
                     makeTagTwo(body.getText().toString());
                     Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
@@ -106,7 +109,7 @@ public class Notebook extends AppCompatActivity {
                     makeTagTwo(body.getText().toString());
                     Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(getApplicationContext(), "There's nothing to save!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
                 }
             }
         });
