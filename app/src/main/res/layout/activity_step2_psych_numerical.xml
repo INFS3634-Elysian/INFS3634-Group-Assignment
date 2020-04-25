@@ -7,17 +7,6 @@
     android:background="#FFFFFF"
     tools:context=".Step1AppCv">
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="363dp"
-        android:layout_height="208dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView47"
-        app:srcCompat="@drawable/numerical" />
-
     <View
         android:id="@+id/divider3Numerical"
         android:layout_width="305dp"
@@ -108,16 +97,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
         android:layout_marginLeft="29dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
         android:fontFamily="@font/regular"
         android:text="Question Content"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
 
     <Button
         android:id="@+id/btnSubmitNumerical"
@@ -238,4 +227,15 @@
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider3Numerical" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="344dp"
+        android:layout_height="169dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView47"
+        app:srcCompat="@drawable/numerical" />
 </androidx.constraintlayout.widget.ConstraintLayout>
