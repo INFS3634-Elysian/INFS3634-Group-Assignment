@@ -132,19 +132,19 @@ public class Home extends AppCompatActivity {
         } else if (position == 6) {
             intent = new Intent(this, Step4Acentre.class);
             startActivity(intent);
+//        } else if (position == 7) {
+//            intent = new Intent(this, Step4AcentreInterview.class);
+//            startActivity(intent);
         } else if (position == 7) {
-            intent = new Intent(this, Step4AcentreInterview.class);
-            startActivity(intent);
-        } else if (position == 8) {
             intent = new Intent(this, Step5Outcome.class);
             startActivity(intent);
-        } else if (position == 9) {
+        } else if (position == 8) {
             intent = new Intent(this, Step6FirstDay.class);
             startActivity(intent);
-        } else if (position == 10) {
+        } else if (position == 9) {
             intent = new Intent(this, OtherNetworking.class);
             startActivity(intent);
-        } else if (position == 11) {
+        } else if (position == 10) {
             intent = new Intent(this, OtherCareerOpp.class);
             startActivity(intent);
         }
