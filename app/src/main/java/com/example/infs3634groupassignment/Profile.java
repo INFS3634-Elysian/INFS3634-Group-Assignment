@@ -83,34 +83,6 @@ public class Profile extends AppCompatActivity {
         });
 
 
-        // Functionality for the inspirational quote
-        // Convert Json response string into a Java object, connect retrofit with Inspire interface and call API to retrieve the joke
-//        btnInspire.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Retrofit retrofit = new Retrofit.Builder()
-//                        .baseUrl("https://api.chucknorris.io/")
-//                        .addConverterFactory(GsonConverterFactory.create())
-//                        .build();
-//                InspireService service = retrofit.create(InspireService.class);
-//                Call<Inspire> inspireCall = service.getValue();
-//                inspireCall.enqueue(new Callback<Inspire>() {
-//                    @Override
-//                    public void onResponse(Call<Inspire> call, Response<Inspire> response) {
-//                        Log.d(TAG, "onResponse: SUCCESS");
-//                        String joke = response.body().getValue();
-//                        tvQuote.setVisibility(View.VISIBLE);
-//                        tvQuote.setText("\"" + joke + "\"");
-//                        btnInspire.setText("More!");
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<Inspire> call, Throwable t) {
-//                        Log.d(TAG, "onFailure: FAILURE");
-//                    }
-//                });
-//            }
-//        });
 
 
         home.setOnClickListener(new View.OnClickListener() {
@@ -176,6 +148,9 @@ public class Profile extends AppCompatActivity {
         preferencesEditorHeading.commit();
     }
 
+    // Functionality for the inspirational quote
+    // Use asyncTask to enable faster performance of the API call
+    // Convert Json response string into a Java object, connect retrofit with Inspire interface and call API to retrieve the joke
     private class GetQuoteTask extends AsyncTask<Void, Void, String> {
         @Override
         protected String doInBackground(Void... voids) {
