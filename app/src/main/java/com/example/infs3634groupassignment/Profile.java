@@ -3,12 +3,14 @@ package com.example.infs3634groupassignment;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,9 +29,15 @@ public class Profile extends AppCompatActivity {
     private ImageView notebook;
     private ImageView profile;
     private ImageView settings;
+
+    private EditText goal;
+    private SharedPreferences savedGoal;
+    private Button btnSave;
     private Button btnInspire;
     private TextView tvQuote;
+
     private String TAG = "Profile";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +50,33 @@ public class Profile extends AppCompatActivity {
         notebook = findViewById(R.id.ivNotebook);
         profile = findViewById(R.id.ivProfile);
         settings = findViewById(R.id.ivSettings);
+
+        goal = findViewById(R.id.editGoal);
+        btnSave = findViewById(R.id.btnSave);
         btnInspire = findViewById(R.id.btnInspire);
         tvQuote = findViewById(R.id.tvQuote);
 
+
+        // Functionality for saving goal into sharedPreferences file
+        savedGoal = getSharedPreferences("goal", MODE_PRIVATE);
+        goal.setText((savedGoal.getString("tag","")));
+        btnSave.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View view) {
+                                           if (goal.getText().toString() != null) {
+                                               makeTag(goal.getText().toString());
+                                               Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
+                                           } else if (goal.getText().toString().length() == 0)  {
+                                               Toast.makeText(getApplicationContext(), "There is nothing to save!", Toast.LENGTH_LONG).show();
+                                           } else {
+                                               Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
+                                           }
+                                       }
+                                   });
+
+
+
+        // Functionality for the inspirational quote
         // Convert Json response string into a Java object, connect retrofit with Inspire interface and call API to retrieve the joke
         btnInspire.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,4 +156,11 @@ public class Profile extends AppCompatActivity {
             databaseHelper.setAchievementStatus("Who am I?");
         }
     }
+    private void makeTag(String tag){
+        String head = savedGoal.getString(tag, "");
+        SharedPreferences.Editor preferencesEditorHeading = savedGoal.edit();
+        preferencesEditorHeading.putString("tag",tag);
+        preferencesEditorHeading.commit();
+    }
 }
+

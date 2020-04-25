@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -72,7 +71,7 @@ public class Notebook extends AppCompatActivity {
         settings = findViewById(R.id.ivSettings);
         btnSave = findViewById(R.id.btnSave);
         heading = findViewById(R.id.editHeading);
-        body = findViewById(R.id.editBody);
+        body = findViewById(R.id.editGoal);
         // Setting the values of heading and body TextViews to what is stored in getSharedPreferences file.
         // Operating mode is set to private so that only this activity can access the file.
         savedHeading = getSharedPreferences("heading", MODE_PRIVATE);
@@ -93,10 +92,7 @@ public class Notebook extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                if ((heading.getText().toString().equals("Heading")) && (body.getText().toString().equals("Start typing your notes!"))){
-                    Toast.makeText(getApplicationContext(), "There's nothing to save!", Toast.LENGTH_LONG).show();
-                }
-                else if((heading.getText().toString() != null) && (body.getText().toString() != null)){
+               if((heading.getText().toString() != null) && (body.getText().toString() != null)){
                     makeTag(heading.getText().toString());
                     makeTagTwo(body.getText().toString());
                     Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
@@ -108,6 +104,8 @@ public class Notebook extends AppCompatActivity {
                 else if(body.getText().toString() != null){
                     makeTagTwo(body.getText().toString());
                     Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
+                } else if ((heading.getText().toString().equals("Heading")) && (body.getText().toString().equals("Start typing your notes!"))){
+                    Toast.makeText(getApplicationContext(), "There's nothing to save!", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
                 }

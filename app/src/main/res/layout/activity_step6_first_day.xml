@@ -63,7 +63,7 @@
                     android:id="@+id/ivCongrats"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:background="@drawable/imageview"
+
                     android:scaleType="centerCrop"
                     android:src="@drawable/firstday_work"
                     app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +141,7 @@
                     android:layout_height="70dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/imageview"
+
                     android:scaleType="centerCrop"
                     android:src="@drawable/firstday_wear"
                     app:layout_constraintEnd_toStartOf="@+id/ivTeam"
@@ -154,7 +154,7 @@
                     android:layout_height="70dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/imageview"
+
                     android:scaleType="centerCrop"
                     android:src="@drawable/firstday_bring"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -212,7 +212,7 @@
                     android:layout_height="70dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/imageview"
+
                     android:scaleType="centerCrop"
                     android:src="@drawable/firstday_say"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -226,7 +226,7 @@
                     android:layout_height="70dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/imageview"
+
                     android:scaleType="centerCrop"
                     android:src="@drawable/firstday_other"
                     app:layout_constraintBottom_toBottomOf="parent"

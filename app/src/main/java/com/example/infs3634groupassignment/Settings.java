@@ -79,7 +79,8 @@ public class Settings extends AppCompatActivity {
                         "<br /><br /><b>Cathy Liang</b> | Bachelor of Commerce and Bachelor of Information Systems at UNSW" +
                         "<br /><b>Jasen Yu</b> | Bachelor of Commerce and Bachelor of Information Systems at UNSW" +
                         "<br /><b>Sandra Ma</b> | Bachelor of Commerce and Bachelor of Information Systems at UNSW" +
-                        "<br /><b>Truman Ng</b> | Bachelor of Commerce and Bachelor of Information Systems at UNSW"
+                        "<br /><b>Truman Ng</b> | Bachelor of Commerce and Bachelor of Information Systems at UNSW" +
+                        "<br /><br /> If you'd like to contact our team, please visit our website: elysian.co"
                 );
                 finalText2.setText(Html.fromHtml(text2));
 
