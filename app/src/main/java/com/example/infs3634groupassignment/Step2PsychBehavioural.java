@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -90,6 +92,25 @@ public class Step2PsychBehavioural extends AppCompatActivity {
 
         //INSTANTIATE DB HELPER
         final DatabaseHelper databaseHelper = new DatabaseHelper(this);
+
+        //SHOW ACHIEVEMENT
+        if (databaseHelper.getAchievementStatus("Completed: Behavioural Tests")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.ach_behavioural);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("Completed: Behavioural Tests");
+
+            Toast toast = new Toast(this);
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("Completed: Behavioural Tests");
+        }
 
         //CALLING FIRST INSTANCE OF QUESTION
         createQ();
@@ -259,6 +280,27 @@ public class Step2PsychBehavioural extends AppCompatActivity {
             tryAgainView.setVisibility(View.VISIBLE);
 
             Toast.makeText(getApplicationContext(), "Final Score: " + cCounter + "/3", Toast.LENGTH_LONG).show();
+
+            if (cCounter == 3) {
+                final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+                if (databaseHelper.getAchievementStatus("A Behavioural Hero!")) {
+
+                } else {
+                    LayoutInflater inflater = getLayoutInflater();
+                    View view = inflater.inflate(R.layout.toast_layout,
+                            (ViewGroup)findViewById(R.id.relativeLayout1));
+                    ImageView image = view.findViewById(R.id.imvImage);
+                    image.setImageResource(R.drawable.ach_star);
+                    TextView text = view.findViewById(R.id.textView2);
+                    text.setText("A Behavioural Hero!");
+
+                    Toast toast = new Toast(getApplicationContext());
+                    toast.setView(view);
+                    toast.show();
+
+                    databaseHelper.setAchievementStatus("A Behavioural Hero!");
+                }
+            }
         }
     }
 

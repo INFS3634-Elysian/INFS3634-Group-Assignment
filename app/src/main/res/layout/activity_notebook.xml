@@ -39,7 +39,7 @@
 
 
     <EditText
-        android:id="@+id/editBody"
+        android:id="@+id/editGoal"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginStart="20dp"

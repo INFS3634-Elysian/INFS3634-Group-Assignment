@@ -5,14 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -43,6 +44,25 @@ public class Notebook extends AppCompatActivity {
         setContentView(R.layout.activity_notebook);
         setTitle("Notebook");
 
+        final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+        if (databaseHelper.getAchievementStatus("Time to take some notes")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.ach_notepad);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("Time to take some notes");
+
+            Toast toast = new Toast(getApplicationContext());
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("Time to take some notes");
+        }
+
         // Linking java and xml attributes
         home = findViewById(R.id.ivHome);
         trophy= findViewById(R.id.ivTrophy);
@@ -51,7 +71,7 @@ public class Notebook extends AppCompatActivity {
         settings = findViewById(R.id.ivSettings);
         btnSave = findViewById(R.id.btnSave);
         heading = findViewById(R.id.editHeading);
-        body = findViewById(R.id.editBody);
+        body = findViewById(R.id.editGoal);
         // Setting the values of heading and body TextViews to what is stored in getSharedPreferences file.
         // Operating mode is set to private so that only this activity can access the file.
         savedHeading = getSharedPreferences("heading", MODE_PRIVATE);
@@ -72,7 +92,7 @@ public class Notebook extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                if((heading.getText().toString() != null) && (body.getText().toString() != null)){
+               if((heading.getText().toString() != null) && (body.getText().toString() != null)){
                     makeTag(heading.getText().toString());
                     makeTagTwo(body.getText().toString());
                     Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
@@ -84,8 +104,10 @@ public class Notebook extends AppCompatActivity {
                 else if(body.getText().toString() != null){
                     makeTagTwo(body.getText().toString());
                     Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
-                } else {
+                } else if ((heading.getText().toString().equals("Heading")) && (body.getText().toString().equals("Start typing your notes!"))){
                     Toast.makeText(getApplicationContext(), "There's nothing to save!", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Your changes have been saved!", Toast.LENGTH_LONG).show();
                 }
             }
         });

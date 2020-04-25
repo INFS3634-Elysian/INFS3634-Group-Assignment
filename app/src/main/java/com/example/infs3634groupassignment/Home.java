@@ -9,7 +9,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
     public static final String EXTRA_MESSAGE ="au.edu.unsw.infs3634.beers.MESSAGE";
@@ -34,6 +39,25 @@ public class Home extends AppCompatActivity {
         mAdapter = new ApplicationStepsAdapter(ApplicationDatabase.getApplicationDatabase(), listener);
         mRecyclerView.setAdapter(mAdapter);
         setTitle("Welcome to Your Dashboard, Hamid");
+
+        final DatabaseHelper databaseHelper = new DatabaseHelper(this);
+        if (databaseHelper.getAchievementStatus("Home, Sweet, Home")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.ach_home);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("Home, Sweet, Home");
+
+            Toast toast = new Toast(this);
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("Home, Sweet, Home");
+        }
     }
 
     private void launchApplicationSteps(int position) {

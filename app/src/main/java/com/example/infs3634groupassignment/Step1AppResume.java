@@ -6,10 +6,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
@@ -37,6 +40,25 @@ public class Step1AppResume extends AppCompatActivity {
         notebook = findViewById(R.id.ivNotebook);
         profile = findViewById(R.id.ivProfile);
         settings = findViewById(R.id.ivSettings);
+
+        final DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+        if (databaseHelper.getAchievementStatus("Completed: Resumes")) {
+
+        } else {
+            LayoutInflater inflater = getLayoutInflater();
+            View view = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup)findViewById(R.id.relativeLayout1));
+            ImageView image = view.findViewById(R.id.imvImage);
+            image.setImageResource(R.drawable.ach_resume);
+            TextView text = view.findViewById(R.id.textView2);
+            text.setText("Completed: Resumes");
+
+            Toast toast = new Toast(getApplicationContext());
+            toast.setView(view);
+            toast.show();
+
+            databaseHelper.setAchievementStatus("Completed: Resumes");
+        }
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override

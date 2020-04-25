@@ -7,6 +7,15 @@
     android:background="#FFFFFF"
     tools:context=".Step1AppCv">
 
+    <View
+        android:id="@+id/divider3Numerical"
+        android:layout_width="305dp"
+        android:layout_height="2dp"
+        android:background="@drawable/divider"
+        android:paddingLeft="29dp"
+        app:layout_constraintStart_toStartOf="@+id/txvQNoNumerical"
+        app:layout_constraintTop_toBottomOf="@+id/txvQNoNumerical" />
+
     <ImageView
         android:id="@+id/ivHome"
         android:layout_width="30dp"
@@ -81,4 +90,152 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:srcCompat="@drawable/nav_settings" />
+
+    <TextView
+        android:id="@+id/txvQuestionNumerical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:fontFamily="@font/regular"
+        android:text="Question Content"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+    <Button
+        android:id="@+id/btnSubmitNumerical"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/regular"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/light_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/rgpOptionsNumerical"
+        app:layout_constraintTop_toBottomOf="@+id/rgpOptionsNumerical" />
+
+    <RadioGroup
+        android:id="@+id/rgpOptionsNumerical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="110dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbnOptionANumerical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/regular"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/rbnOptionBNumerical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/regular"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/rbnOptionCNumerical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/regular"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/rbnOptionDNumerical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/regular"
+            android:text="RadioButton" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnTryAgainNumerical"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/regular"
+        android:text="Try Again"
+        android:textAllCaps="false"
+        android:textColor="@color/light_gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/rgpOptionsNumerical"
+        app:layout_constraintTop_toBottomOf="@+id/rgpOptionsNumerical" />
+
+    <Button
+        android:id="@+id/btnNextNumerical"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/regular"
+        android:text="Next Question"
+        android:textAllCaps="false"
+        android:textColor="@color/light_gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/rgpOptionsNumerical"
+        app:layout_constraintTop_toBottomOf="@+id/rgpOptionsNumerical" />
+
+    <TextView
+        android:id="@+id/txvQNoNumerical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        android:fontFamily="@font/bold"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="329dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="8dp"
+        android:text="A survey has been taken by students in UNSW to discover the top 6 games people have played in 2020."
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3Numerical" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="344dp"
+        android:layout_height="169dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView47"
+        app:srcCompat="@drawable/numerical" />
 </androidx.constraintlayout.widget.ConstraintLayout>

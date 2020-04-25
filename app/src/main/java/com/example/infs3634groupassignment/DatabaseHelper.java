@@ -12,7 +12,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "behavioural.db";
 
-
     //DECLARING TABLE FOR BEHAVIOURAL QUIZ
     private static final String TABLE_NAME = "examples";
 
@@ -23,13 +22,42 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_OPTION2 = "option2";
     private static final String COLUMN_OPTION3 = "option3";
 
+    //DECLARING TABLE FOR NUMERICAL QUIZ
+    private static final String TABLE_NAME_3 = "Numericals";
+
+    private static final String COLUMN_ID_3 = "id";
+    private static final String COLUMN_QUESTION_3 = "question";
+    private static final String COLUMN_ANSWER_3 = "answer";
+    private static final String COLUMN_OPTION1_3 = "option1";
+    private static final String COLUMN_OPTION2_3 = "option2";
+    private static final String COLUMN_OPTION3_3 = "option3";
+
+    //DECLARING TABLE FOR ACHIEVEMENTS
+    private static final String TABLE_NAME_2 = "achievements";
+
+    private static final String COLUMN_ID_2 = "id";
+    private static final String COLUMN_PAGE = "page";
+    private static final String COLUMN_NAME = "name";
+    private static final String COLUMN_STATUS = "status";
+
     //INSTANTIATING OTHER VARIABLES
     private String question = "";
     private String answer = "";
     private String option1 = "";
     private String option2 = "";
     private String option3 = "";
+    private String questionNumerical = "";
+    private String answerNumerical = "";
+    private String option1Numerical = "";
+    private String option2Numerical = "";
+    private String option3Numerical = "";
     private int holder;
+
+    //INSTANTIATING OTHER VARIABLES
+    private boolean status;
+    private String statusS;
+    private boolean current;
+    private String currentS;
 
     SQLiteDatabase database;
 
@@ -64,6 +92,48 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " +TABLE_NAME+ " ( " + COLUMN_QUESTION + ", " + COLUMN_ANSWER + ", " + COLUMN_OPTION1 + ", " + COLUMN_OPTION2 + ", " + COLUMN_OPTION3 + ") VALUES ('Whilst working as a graduate trainee at a small consulting firm you have noticed that there is a lot of useful research that is conducted in-house and on behalf of clients. You can see that this would benefit colleagues and clients alike in many ways but currently there is not an obvious way to disseminate this. You bring this to the attention of your manager and she suggests that you give this some thought and propose a way to improve practice. What would you do?', 'Suggest that the company could set up a ‘Research Forum’ whose remit is to ensure the successful sharing of research across the business with representatives from all relevant departments.', 'Suggest that you set up a webinar every 6 months where key people from the organisation are invited to share the findings from their recent research with other employees.', 'Suggest that the company runs a 2-day internal conference annually which has a direct focus on sharing research findings with all employees.', 'Suggest that an area is created on the company intranet where people are encouraged to upload the research that they undertake.')");
         db.execSQL("INSERT INTO " +TABLE_NAME+ " ( " + COLUMN_QUESTION + ", " + COLUMN_ANSWER + ", " + COLUMN_OPTION1 + ", " + COLUMN_OPTION2 + ", " + COLUMN_OPTION3 + ") VALUES ('You are working in a call centre for a major UK telecommunications company. You have received a call from a customer who has been waiting in for an engineer who has failed to arrive within the scheduled time slot. The customer is upset and is talking in a raised voice. What do you do?', 'Ask the customer to hold while you contact the engineer to establish where she is', 'Apologise to the customer and say you will arrange for a re-scheduled appointment.', 'Listen to the customer’s feedback and tell them that you can understand why they are upset and that it must be very inconvenient for them.', 'Explain that the engineer has a very busy schedule and it is difficult for her to always be on time but you’re sure she will arrive soon.')");
         db.execSQL("INSERT INTO " +TABLE_NAME+ " ( " + COLUMN_QUESTION + ", " + COLUMN_ANSWER + ", " + COLUMN_OPTION1 + ", " + COLUMN_OPTION2 + ", " + COLUMN_OPTION3 + ") VALUES ('You are a team leader in a customer contact centre. You just overheard an employee in your team telling a customer that they were “over-reacting” and that they needed to “get psychiatric help”. You are not sure what the customer’s call was about but now the call has finished and you have a chance to speak to the employee. What do you do?', 'Tell your employee that you will work with them to improve their performance over the next 3 months', 'Tell the employee that you have no option but to recommend their dismissal', 'Tell the employee to do it again', 'Ignore the employees behaviour and hope they will not repeat their mistakes on another occasion')");
+
+        db.execSQL("CREATE TABLE " + TABLE_NAME_2 + " ( " + COLUMN_ID_2 + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PAGE + " TEXT, " + COLUMN_NAME + " TEXT, " + COLUMN_STATUS + " TEXT)");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Main', 'The Journey Begins', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Resume', 'Completed: Resumes', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('CV', 'Completed: Curriculum Vitae', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Behavioural', 'Completed: Behavioural Tests', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Cognitive', 'Completed: Cognitive Tests', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Numerical', 'Completed: Numerical Tests', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Video Interviews', 'Completed: Video Interviews', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Assessment Centre', 'Completed: Group Work', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Assessment Centre', 'Completed: Personal Interviews', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Outcome', 'Completed: Outcomes', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('First Day', 'Completed: First Day', 'false')");
+
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Home', 'Home, Sweet, Home', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Achievement', 'Achievements, so many Achievements...', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Notebook', 'Time to take some notes', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Profile', 'Who am I?', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Settings', 'Set your settings', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Settings', 'Meet the team!', 'false')");
+
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Behavioural', 'A Behavioural Hero!', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Cognitive', 'A Cognitive Hero!', 'false')");
+
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Offer', 'You did it!', 'false')");
+        db.execSQL("INSERT INTO " + TABLE_NAME_2 + " ( " + COLUMN_PAGE + ", " + COLUMN_NAME + ", " + COLUMN_STATUS + ") VALUES ('Reject', 'Life goes on...', 'false')");
+
+        db.execSQL("CREATE TABLE "+TABLE_NAME_3+" ( "+COLUMN_ID_3 +" INTEGER PRIMARY KEY AUTOINCREMENT, "+COLUMN_QUESTION_3 +" TEXT, "+COLUMN_ANSWER_3 +" TEXT, "+COLUMN_OPTION1_3+ " TEXT, "+COLUMN_OPTION2_3+ " TEXT, "+COLUMN_OPTION3_3+ " TEXT)");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('Which game was played by a higher percentage of females than males in 2020?', 'Clash of Clans' ,'League of legends ', 'Farmville', 'None of the above')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the combined female readership percentage of the Echo360, the Clash of Clans, and League of legends for female students in 2020?', '26.9%', '27.1%', '26.7%', '26.5%')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the most popular game in 2019?', 'Dota', 'Animal Crossing', 'League of Legends', 'Farmville')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('Which game was played by a higher percentage of males than females in 2020?', 'League of legends ', 'Farmville', 'Dota ', 'All of the above')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the combined male readership percentage of Animal Crossing, Dota, and League of legends for male students in 2020?', '29.8%', '27.1%', '30.2%', '28.4%')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the most popular game in 2020? ', 'Animal Crossing', 'League of Legends', 'Farmville', 'Clash of Clans')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the least popular game in 2020? ', 'Farmville', 'Dota', 'Clash of Clans', 'Echo 360')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the most popular game for males in 2020?', 'League of Legends', 'Farmville', 'Dota ', 'Echo 360')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the most popular game for females in 2020?', 'Animal Crossing', 'Barbie', 'Dota ', 'Echo 360')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the least popular game for males in 2020?', 'Farmville', 'Dota', 'Clash of Clans', 'Echo 360')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('What was the least popular game for females in 2020?', 'None of the above', 'Animal Crossing', 'League of Legends', 'Echo 360')");
+        db.execSQL("INSERT INTO " +TABLE_NAME_3+ " ( "+ COLUMN_QUESTION_3 + ", " + COLUMN_ANSWER_3 + ", " + COLUMN_OPTION1_3 + ", " + COLUMN_OPTION2_3 + ", " + COLUMN_OPTION3_3 + ") VALUES ('The climate induced by COVID-19 has sparked an increase in playership for Animal Crossing by 20%. How much bigger is total playership for animal crossing than league of legends? (2 Decimal Places)', '2.05', '2.04', '0.49', '0.50')");
+
+
     }
 
     //DB AT UPGRADE; i.e generally unnecessary
@@ -140,5 +210,112 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
         return option3;
+    }
+
+    //METHODS FOR ACHIEVEMENTS
+    public boolean getAchievementStatus(String name) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT " + COLUMN_STATUS + " FROM " + TABLE_NAME_2 + " WHERE " + COLUMN_NAME + "= '" + name + "'", null);
+        if(cursor.moveToFirst()) {
+            do {
+                statusS = cursor.getString(cursor.getColumnIndex(COLUMN_STATUS));
+            } while (cursor.moveToNext());
+        }
+
+        status = Boolean.parseBoolean(statusS);
+
+        return status;
+    }
+
+    public void setAchievementStatus(String aName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        db.execSQL("UPDATE " + TABLE_NAME_2 + " SET " + COLUMN_STATUS + " = 'true' WHERE " + COLUMN_NAME + "='" + aName + "'");
+
+    }
+
+    public boolean getAchievementProgress(int id) {
+        SQLiteDatabase db= this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT " + COLUMN_STATUS + " FROM " + TABLE_NAME_2 + " WHERE " + COLUMN_ID_2 + " = " + id, null);
+        if(cursor.moveToFirst()) {
+            do {
+                currentS = cursor.getString(cursor.getColumnIndex(COLUMN_STATUS));
+            } while (cursor.moveToNext());
+        }
+
+        current = Boolean.parseBoolean(currentS);
+
+        return current;
+    }
+
+    //METHODS FOR NUMERICAL QUIZZES; FUNCTIONS: returns question and possible options
+    public String getQuestionNumerical() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        int retrieve = (int) Math.floor(Math.random() * 10) + 1;
+        holder = retrieve;
+
+        Cursor cursor = db.rawQuery("SELECT "+COLUMN_QUESTION_3+ " FROM " +TABLE_NAME_3+ " WHERE " +COLUMN_ID_3+ "=" + retrieve,null);
+        if(cursor.moveToFirst()) {
+            do {
+                questionNumerical = cursor.getString(cursor.getColumnIndex(COLUMN_QUESTION_3));
+            } while (cursor.moveToNext());
+        }
+
+        return questionNumerical;
+    }
+
+    public String getAnswerNumerical() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT "+COLUMN_ANSWER_3+ " FROM " +TABLE_NAME_3+ " WHERE " +COLUMN_ID_3+ "=" + holder,null);
+        if(cursor.moveToFirst()) {
+            do {
+                answerNumerical = cursor.getString(cursor.getColumnIndex(COLUMN_ANSWER_3));
+            } while (cursor.moveToNext());
+        }
+
+        return answerNumerical;
+    }
+
+    public String getOption1Numerical() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT "+COLUMN_OPTION1_3+ " FROM " +TABLE_NAME_3+ " WHERE " +COLUMN_ID_3+ "=" + holder,null);
+        if(cursor.moveToFirst()) {
+            do {
+                option1Numerical = cursor.getString(cursor.getColumnIndex(COLUMN_OPTION1_3));
+            } while (cursor.moveToNext());
+        }
+
+        return option1Numerical;
+    }
+
+    public String getOption2Numerical() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT "+COLUMN_OPTION2_3+ " FROM " +TABLE_NAME_3+ " WHERE " +COLUMN_ID_3+ "=" + holder,null);
+        if(cursor.moveToFirst()) {
+            do {
+                option2Numerical = cursor.getString(cursor.getColumnIndex(COLUMN_OPTION2_3));
+            } while (cursor.moveToNext());
+        }
+
+        return option2Numerical;
+    }
+
+    public String getOption3Numerical() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT "+COLUMN_OPTION3_3+ " FROM " +TABLE_NAME_3+ " WHERE " +COLUMN_ID_3+ "=" + holder,null);
+        if(cursor.moveToFirst()) {
+            do {
+                option3Numerical = cursor.getString(cursor.getColumnIndex(COLUMN_OPTION3_3));
+            } while (cursor.moveToNext());
+        }
+
+        return option3Numerical;
     }
 }
