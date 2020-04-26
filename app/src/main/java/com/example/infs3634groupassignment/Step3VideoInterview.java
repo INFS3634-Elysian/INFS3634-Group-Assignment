@@ -63,10 +63,6 @@ public class Step3VideoInterview extends AppCompatActivity {
         step3aVideos.add(new Step3aVideos("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/64x880PzZ9k\" frameborder=\"0\" allowfullscreen></iframe>") );
         step3aVideos.add(new Step3aVideos("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/qRQDL9HQErk\" frameborder=\"0\" allowfullscreen></iframe>") );
 
-
-
-
-
         Step3aAdapter step3aAdapter = new Step3aAdapter(step3aVideos);
 
         recyclerView.setAdapter(step3aAdapter);*/

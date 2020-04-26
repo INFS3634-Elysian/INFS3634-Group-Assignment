@@ -252,7 +252,7 @@
             <TextView
                 android:id="@+id/tv"
                 android:layout_width="match_parent"
-                android:layout_height="60dp" />
+                android:layout_height="30dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@id/recyclerView"
