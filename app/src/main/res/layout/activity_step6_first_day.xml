@@ -26,13 +26,23 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/regular"
                 android:paddingLeft="20dp"
-                android:paddingTop="30dp"
+                android:paddingTop="15dp"
                 android:paddingRight="20dp"
-                android:gravity="center_horizontal"
-                android:text="Feeling nervous? Shake it out!"
-                android:textColor="#FFC107"
+                android:text="Preparing For Day 1"
                 android:textSize="22sp"
                 android:textStyle="bold" />
+            <View
+                android:id="@+id/view30"
+                android:layout_width="210dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
 
 
 
