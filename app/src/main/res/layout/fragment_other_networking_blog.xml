@@ -84,8 +84,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
                 android:layout_marginTop="15dp"
                 >
 
@@ -93,7 +93,6 @@
                     android:id="@+id/imageView4"
                     android:layout_width="73dp"
                     android:layout_height="73dp"
-
                     android:scaleType="fitCenter"
                     android:src="@drawable/networking_sandra"
                     app:layout_constraintStart_toStartOf="parent"
@@ -125,20 +124,19 @@
 
                 <Button
                     android:id="@+id/connect1"
-                    android:layout_width="75dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_width="69dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
-                    android:background="#CDDC39"
-                    android:fontFamily="@font/regular"
+                    android:fontFamily="@font/bold"
                     android:text="Connect"
                     android:textColor="#000000"
-                    android:textSize="6sp"
-                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:background="@drawable/button"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView13"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -146,8 +144,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
                 android:layout_marginTop="10dp"
                 >
 
@@ -173,11 +171,11 @@
 
                 <TextView
                     android:id="@+id/textView16"
-                    android:layout_width="181dp"
+                    android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
-                    android:text='"Sometimes in life you might not get what you want. But you have to work hard, network with people and build those connections!"'
+                    android:text='"You have to work hard, network with people and build those connections!"'
                     android:textSize="13sp"
                     android:textStyle="italic"
                     app:layout_constraintStart_toEndOf="@+id/imageView5"
@@ -185,16 +183,16 @@
 
                 <Button
                     android:id="@+id/connect2"
-                    android:layout_width="75dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="#CDDC39"
+                    android:layout_width="69dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
                     android:text="Connect"
                     android:textColor="#000000"
-                    android:textSize="6sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/textView16"
+                    android:textSize="10sp"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/bold"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginTop="20dp"
@@ -205,8 +203,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
                 android:layout_marginTop="10dp"
                 >
 
@@ -247,16 +245,16 @@
 
                 <Button
                     android:id="@+id/connect3"
-                    android:layout_width="75dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="#CDDC39"
+                    android:layout_width="69dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
                     android:text="Connect"
                     android:textColor="#000000"
-                    android:textSize="6sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/textView19"
+                    android:background="@drawable/button"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/bold"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginTop="20dp"
@@ -268,8 +266,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="23dp"
                 android:layout_marginTop="10dp"
                 >
 
@@ -309,16 +307,16 @@
 
                 <Button
                     android:id="@+id/connect4"
-                    android:layout_width="75dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:background="#CDDC39"
+                    android:layout_width="69dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
                     android:text="Connect"
                     android:textColor="#000000"
-                    android:textSize="6sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/textView26"
+                    android:background="@drawable/button"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/bold"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginTop="20dp"
