@@ -4,8 +4,160 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2D8CDAE4"
+    android:background="#FFFFFF"
     tools:context=".Step1AppCv">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txvTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/bold"
+            android:text="Where can you go from here?"
+            android:textSize="22sp" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="29dp"
+            android:paddingLeft="29dp"
+            android:background="@drawable/divider" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginEnd="23dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/regular"
+            android:text="We know how hard it is for you to find a job, so we've have supplied you with many different opportunities for you to get a start for yourself!"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/careerPortalBtn"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginRight="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option1">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="585dp"
+                android:layout_height="269dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/career_unswportal" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="UNSW Careers Portal"
+                android:textColor="#0B0A0A"
+                android:textSize="20sp"
+                android:fontFamily="@font/bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/otherJobsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/careerPortalBtn">
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="498dp"
+                android:layout_height="187dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/career_otherjob" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Other Job opportunties"
+                android:textColor="#050505"
+                android:textSize="20sp"
+                android:fontFamily="@font/bold" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="359dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="Good Luck!"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otherJobsBtn" />
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
 
     <ImageView
         android:id="@+id/ivHome"
@@ -82,109 +234,5 @@
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:srcCompat="@drawable/nav_settings" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/careerPortalBtn"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24">
 
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="358dp"
-            android:layout_height="209dp"
-            android:layout_gravity="center|center_horizontal"
-            app:srcCompat="@drawable/career_unswportal" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="UNSW Careers Portal"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/otherJobsBtn"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/careerPortalBtn">
-
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="498dp"
-            android:layout_height="187dp"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/career_otherjob" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Other Job opportunties"
-            android:textColor="#050505"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="390dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/roboto_black"
-        android:text="Where can you go from here?"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="348dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:text="We know how hard it is for you to find a job, so we've have supplied you with many different opportunities for you to get a start for yourself!"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="359dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:text="Good Luck!"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otherJobsBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
