@@ -44,7 +44,8 @@
         android:text="Outside university, there are many other job opportunities that you can have a look at!"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView45" />
+        app:layout_constraintTop_toBottomOf="@+id/textView45"
+        android:textSize="16sp"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/seek"
