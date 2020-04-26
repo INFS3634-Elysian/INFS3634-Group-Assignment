@@ -40,7 +40,6 @@
                 android:layout_height="2dp"
                 android:layout_marginLeft="29dp"
                 android:layout_marginStart="29dp"
-
                 android:background="@drawable/divider"
                 android:paddingLeft="29dp"
                 android:paddingRight="29dp"/>
@@ -55,7 +54,7 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="Pre-recorded interviews are used when instead of connecting with a person, you will be promoted with interview questions that appear as writing on the screen. You’ll often be given the opportunity to record your answer 1-2 times and the recording will be reviewed later by the employer. "
+                android:text="Pre-recorded interviews are used when instead of connecting with a person, you will be prompted with interview questions that appear as writing on the screen. You’ll often be given the opportunity to record your answer 1-2 times and the recording will be reviewed later by the employer. "
                 android:textSize="16sp" />
 
             <TextView
@@ -68,7 +67,7 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/regular"
-                android:text="See below top 3 tips on how to perform well in your video interview!"
+                android:text="See below our top 3 tips on how to perform well in your video interview!"
                 android:textSize="16sp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -106,7 +105,7 @@
 
             <View
                 android:id="@+id/d1"
-                android:layout_width="287dp"
+                android:layout_width="330dp"
                 android:layout_height="2dp"
                 android:layout_marginLeft="29dp"
                 android:layout_marginStart="29dp"
@@ -133,7 +132,7 @@
                 android:layout_marginLeft="29dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="23dp"
-                android:text="Maintain eye contact by gazing into you webcam to convey the same level of connection as a live interview. Try keep a good posture by sitting with your back straight and not moving around too much"
+                android:text="Maintain eye contact by gazing into you webcam to convey the same level of connection as a live interview. Try keep a good posture by sitting with your back straight and not moving around too much."
                 android:layout_marginRight="23dp"
                 android:fontFamily="@font/regular"
                 android:textSize="16sp" />
@@ -152,7 +151,7 @@
 
             <View
                 android:id="@+id/d2"
-                android:layout_width="287dp"
+                android:layout_width="170dp"
                 android:layout_height="2dp"
                 android:layout_marginLeft="29dp"
                 android:layout_marginStart="29dp"
@@ -184,7 +183,7 @@
 
             <View
                 android:id="@+id/d3"
-                android:layout_width="287dp"
+                android:layout_width="305dp"
                 android:layout_height="2dp"
                 android:layout_marginLeft="29dp"
                 android:background="@drawable/divider" />
@@ -202,16 +201,80 @@
                 android:text="Choose a location with a neutral background and preferably away from any household members. Remove any clutter from the table and have one page of notes beside you just in case you need to refer to it." />
 
             <TextView
-                android:id="@+id/tv3b"
+                android:id="@+id/tv10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="29dp"
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/bold"
-                android:text="Check out the below videos for more tips!
-"
+                android:text="More information"
                 android:textSize="22sp" />
+
+            <View
+                android:id="@+id/d4"
+                android:layout_width="180dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+                android:background="@drawable/divider" />
+
+            <TextView
+                android:id="@+id/tv43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:text="Check out the below videos for more tips on video interviews!"
+                android:fontFamily="@font/regular"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/yt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="23dp"
+                app:autoPlay="false"
+                app:showFullScreenButton="true"
+                app:videoId="qRQDL9HQErk">
+
+            </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/yt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="23dp"
+                app:autoPlay="false"
+                app:showFullScreenButton="true"
+                app:videoId="64x880PzZ9k">
+
+            </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/yt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="23dp"
+                app:autoPlay="false"
+                app:showFullScreenButton="true"
+                app:videoId="J2VnJOw5Cd0">
+
+            </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
 
 
             <androidx.recyclerview.widget.RecyclerView

@@ -103,7 +103,21 @@
                 android:layout_marginEnd="23dp"
                 android:layout_marginRight="23dp"
                 android:fontFamily="@font/regular"
-                android:text="Preparation is key! To really impress your interviewer, make sure you research industry trends and recent news articles about the company. Whilst you shouldn’t have rehearsed answers for common questions, preparing anecdotes can allow you to frame your accomplishments well and demonstrate your previous experience. "
+                android:text="Preparation is key! To really impress your interviewer, make sure you research industry trends and recent news articles about the company.   "
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv1i"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:fontFamily="@font/regular"
+                android:text="Whilst you shouldn’t have rehearsed answers, preparing anecdotes can allow you to frame your accomplishments well and demonstrate your previous experience. "
                 android:textSize="16sp" />
 
             <TextView
@@ -119,18 +133,24 @@
                 android:text="Preparing an appropriate outfit can also help with your first impression. If possible, observe the employees within the company and what the usual dress code is like. "
                 android:textSize="16sp" />
 
-            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-                android:id="@+id/yt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="29dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="23dp"
-                app:autoPlay="false"
-                app:showFullScreenButton="true"
-                app:videoId="KukmClH1KoA">
+                android:layout_marginStart="29dp"
+                android:layout_marginRight="23dp">
 
-            </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="300dp"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ac_beforeinterview" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/tv2"
@@ -147,7 +167,6 @@
                 android:layout_width="203dp"
                 android:layout_height="2dp"
                 android:layout_marginStart="29dp"
-
                 android:layout_marginLeft="29dp"
                 android:background="@drawable/divider" />
 
@@ -161,8 +180,42 @@
                 android:layout_marginEnd="23dp"
                 android:layout_marginRight="23dp"
                 android:fontFamily="@font/regular"
-                android:text="Now it’s your time to shine! Remember that the interview is a conversation and not an interrogation. You need to let your personality show along with what value you can provide to the company. This will include being conscious of nonverbal cues, showing your enthusiasm for the role and also being an active listener!  "
+                android:text="Now it’s your time to shine! Remember that the interview is a conversation and not an interrogation! "
                 android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv2k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:fontFamily="@font/regular"
+                android:text="You need to let your personality show along with what value you can provide to the company. This will include being conscious of nonverbal cues, showing your enthusiasm for the role and also being an active listener!  "
+                android:textSize="16sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginRight="23dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="300dp"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ac_duringinterview" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
             <TextView
                 android:id="@+id/tv3"
@@ -181,7 +234,6 @@
                 android:layout_height="2dp"
                 android:layout_marginLeft="29dp"
                 android:layout_marginStart="29dp"
-
                 android:background="@drawable/divider" />
 
             <TextView
@@ -193,7 +245,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="23dp"
                 android:layout_marginRight="23dp"
-                android:text="See below for more information on interview tips provided by big companies!"
+                android:text="See below for more information on interview tips from big companies!"
                 android:fontFamily="@font/regular"
                 android:textSize="16sp" />
 

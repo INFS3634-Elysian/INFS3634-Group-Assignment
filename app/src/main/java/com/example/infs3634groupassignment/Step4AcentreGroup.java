@@ -76,9 +76,6 @@ public class Step4AcentreGroup extends AppCompatActivity {
         recyclerView.setAdapter(step4aAdapter);
 
 
-
-
-
         setTitle("Step 4: Assessment Centre- Group Work");
         home = findViewById(R.id.ivHome);
         trophy= findViewById(R.id.ivTrophy);
