@@ -19,6 +19,11 @@ public class OtherNetworkBlogFragment extends Fragment {
     private TextView blogText;
     private ImageView resImage;
     private Button connect1, connect2, connect3, connect4;
+    private ImageView home;
+    private ImageView trophy;
+    private ImageView notebook;
+    private ImageView profile;
+    private ImageView settings;
 
     public OtherNetworkBlogFragment() {
         // Required empty public constructor
@@ -36,6 +41,51 @@ public class OtherNetworkBlogFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_other_networking_blog, container, false);
+        home = v.findViewById(R.id.ivHome);
+        trophy= v.findViewById(R.id.ivTrophy);
+        notebook = v.findViewById(R.id.ivNotebook);
+        profile = v.findViewById(R.id.ivProfile);
+        settings = v.findViewById(R.id.ivSettings);
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Home.class));
+            }
+        });
+
+        trophy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Achievement.class));
+            }
+        });
+
+        notebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Notebook.class));
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Profile.class));
+            }
+        });
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Settings.class));
+            }
+        });
+
+
+
+
+
         connect1 = v.findViewById(R.id.connect1);
         connect1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -68,7 +118,6 @@ public class OtherNetworkBlogFragment extends Fragment {
             }
         });
 
-
         return v;
 
 
@@ -94,5 +143,7 @@ public class OtherNetworkBlogFragment extends Fragment {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/liangcathy/"));
         startActivity(browserIntent);
     }
+
+
 }
 
