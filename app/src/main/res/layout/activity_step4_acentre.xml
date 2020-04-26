@@ -163,7 +163,6 @@
                     android:id="@+id/ivCongrats"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:background="@drawable/imageview"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ac_main"
                     app:layout_constraintStart_toStartOf="parent"
