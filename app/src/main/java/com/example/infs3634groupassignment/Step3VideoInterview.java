@@ -51,7 +51,7 @@ public class Step3VideoInterview extends AppCompatActivity {
             databaseHelper.setAchievementStatus("Completed: Video Interviews");
         }
 
-        recyclerView =  findViewById(R.id.recyclerView);
+       /* recyclerView =  findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -69,7 +69,7 @@ public class Step3VideoInterview extends AppCompatActivity {
 
         Step3aAdapter step3aAdapter = new Step3aAdapter(step3aVideos);
 
-        recyclerView.setAdapter(step3aAdapter);
+        recyclerView.setAdapter(step3aAdapter);*/
 
 
 
