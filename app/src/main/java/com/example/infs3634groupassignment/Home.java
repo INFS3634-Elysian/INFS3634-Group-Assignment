@@ -112,39 +112,36 @@ public class Home extends AppCompatActivity {
     private void launchApplicationSteps(int position) {
         final Intent intent;
         if (position == 0) {
-            intent = new Intent(this, Step1AppResume.class);
+            intent = new Intent(this, Step1Application.class);
             startActivity(intent);
         } else if (position == 1) {
-            intent = new Intent(this, Step1AppCv.class);
-            startActivity(intent);
-        } else if (position == 2) {
             intent = new Intent(this, Step2PsychBehavioural.class);
             startActivity(intent);
-        } else if (position == 3) {
+        } else if (position == 2) {
             intent = new Intent(this, Step2PsychCognitive.class);
             startActivity(intent);
-        } else if (position == 4) {
+        } else if (position == 3) {
             intent = new Intent(this, Step2PsychNumerical.class);
             startActivity(intent);
-        } else if (position == 5) {
+        } else if (position == 4) {
             intent = new Intent(this, Step3VideoInterview.class);
             startActivity(intent);
-        } else if (position == 6) {
+        } else if (position == 5) {
             intent = new Intent(this, Step4Acentre.class);
             startActivity(intent);
 //        } else if (position == 7) {
 //            intent = new Intent(this, Step4AcentreInterview.class);
 //            startActivity(intent);
-        } else if (position == 7) {
+        } else if (position == 6) {
             intent = new Intent(this, Step5Outcome.class);
             startActivity(intent);
-        } else if (position == 8) {
+        } else if (position == 7) {
             intent = new Intent(this, Step6FirstDay.class);
             startActivity(intent);
-        } else if (position == 9) {
+        } else if (position == 8) {
             intent = new Intent(this, OtherNetworking.class);
             startActivity(intent);
-        } else if (position == 10) {
+        } else if (position == 9) {
             intent = new Intent(this, OtherCareerOpp.class);
             startActivity(intent);
         }

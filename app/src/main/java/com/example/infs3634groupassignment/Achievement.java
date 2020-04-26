@@ -1,7 +1,6 @@
 package com.example.infs3634groupassignment;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,11 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Achievement extends AppCompatActivity {
     private ImageView home;
@@ -305,16 +301,16 @@ public class Achievement extends AppCompatActivity {
         }
 
         if (databaseHelper.getAchievementProgress(15)) {
-            TextView txv = findViewById(R.id.txv1_1);
+            TextView txv = findViewById(R.id.txv15_1);
             txv.setText("Who am I?");
-            TextView txv2 = findViewById(R.id.txv1_2);
+            TextView txv2 = findViewById(R.id.txv15_2);
             txv2.setText("Opened the Profile Page");
         } else {
             ImageView imv = (ImageView) findViewById(R.id.imv15);
             imv.setImageDrawable(getResources().getDrawable(R.drawable.ach_lock_l));
-            TextView txv = findViewById(R.id.txv7_1);
+            TextView txv = findViewById(R.id.txv15_1);
             txv.setText("Locked Achievement");
-            TextView txv2 = findViewById(R.id.txv7_2);
+            TextView txv2 = findViewById(R.id.txv15_2);
             txv2.setText("Try opening the Profile Page!");
         }
 

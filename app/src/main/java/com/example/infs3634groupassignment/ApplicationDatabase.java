@@ -31,8 +31,8 @@ public class ApplicationDatabase {
     // Populating the data fields with specific information associated with each restaurant
     public static ArrayList<ApplicationDatabase> getApplicationDatabase(){
         ArrayList<ApplicationDatabase> applicationDatabase = new ArrayList<>();
-        applicationDatabase.add(new ApplicationDatabase("Step 1 | Applicaton- Resume","home_resume"));
-        applicationDatabase.add(new ApplicationDatabase("Step 1 | Application- CV","home_cv"));
+        applicationDatabase.add(new ApplicationDatabase("Step 1 | Application","home_resume"));
+//        applicationDatabase.add(new ApplicationDatabase("Step 1 | Application- CV","home_cv"));
         applicationDatabase.add(new ApplicationDatabase("Step 2 | Behavioural Psychometric Test","home_behavioural"));
         applicationDatabase.add(new ApplicationDatabase("Step 2 | Cognitive Psychometric Test","home_cognitive"));
         applicationDatabase.add(new ApplicationDatabase("Step 2 | Numerical Psychometric Test","home_numerical"));
