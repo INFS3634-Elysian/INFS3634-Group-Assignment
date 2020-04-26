@@ -64,6 +64,8 @@
                     android:layout_height="312.5dp"
                     android:background="@drawable/imageview"
                     android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/resume_1" />
