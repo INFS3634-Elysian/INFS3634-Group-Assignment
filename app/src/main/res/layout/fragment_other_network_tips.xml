@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".OtherNetworkTipsFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,10 +17,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView27"
@@ -30,23 +33,23 @@
                 tools:layout_conversion_absoluteHeight="19dp"
                 tools:layout_conversion_absoluteWidth="0dp" />
 
-        <TextView
-            android:id="@+id/txvTitle1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="29dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/bold"
-            android:text="Networking Tips"
-            android:textSize="22sp" />
+            <TextView
+                android:id="@+id/txvTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
+                android:text="Networking Tips"
+                android:textSize="22sp" />
 
-        <View
-            android:id="@+id/divider1"
-            android:layout_width="180dp"
-            android:layout_height="2dp"
-            android:layout_marginLeft="29dp"
-            android:background="@drawable/divider"
-            android:paddingLeft="29dp" />
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="180dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="29dp"
+                android:background="@drawable/divider"
+                android:paddingLeft="29dp" />
 
             <TextView
                 android:id="@+id/textView29"
@@ -54,48 +57,48 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="29dp"
                 android:layout_marginLeft="29dp"
-                android:layout_marginRight="23dp"
-                android:layout_marginEnd="23dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
                 android:text="We know what it is like to feel awkward meeting someone for the first time. So that is why we are here to help you!"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView28"
                 tools:layout_conversion_absoluteHeight="53dp"
                 tools:layout_conversion_absoluteWidth="338dp" />
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="29dp"
-            android:layout_marginLeft="29dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="23dp"
-            android:layout_marginRight="23dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/networking"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView29"
-            tools:layout_conversion_absoluteHeight="211dp"
-            tools:layout_conversion_absoluteWidth="375dp" />
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/networking"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29"
+                tools:layout_conversion_absoluteHeight="211dp"
+                tools:layout_conversion_absoluteWidth="375dp" />
 
-        <TextView
-            android:id="@+id/txvTitle2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="29dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/bold"
-            android:text="Why is Networking Important?"
-            android:textSize="22sp" />
+            <TextView
+                android:id="@+id/txvTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
+                android:text="Why is Networking Important?"
+                android:textSize="22sp" />
 
-        <View
-            android:id="@+id/divider2"
-            android:layout_width="300dp"
-            android:layout_height="2dp"
-            android:layout_marginLeft="29dp"
-            android:background="@drawable/divider"
-            android:paddingLeft="29dp" />
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="29dp"
+                android:background="@drawable/divider"
+                android:paddingLeft="29dp" />
 
             <TextView
                 android:id="@+id/textView31"
@@ -104,8 +107,8 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginLeft="29dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="23dp"
                 android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
                 android:text="Many people believe that networking during a job search means calling everyone and asking them for a job. Networking is a two way street, it is a way of getting to know someone better and finding ways they might be able to help you and how you can help them in return. Networking is a great opportunity to present yourself, make new connections and even find yourself a new job. Networking is an ongoing process, it requires persistence, attention, organisation and good will.  "
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView30"
@@ -118,9 +121,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="29dp"
                 android:layout_marginLeft="29dp"
-                android:layout_marginRight="23dp"
-                android:layout_marginEnd="23dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
                 android:fontFamily="@font/bold"
                 android:text="Networking Tips"
                 android:textSize="20sp"
@@ -128,7 +131,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView31"
                 tools:layout_conversion_absoluteHeight="27dp"
                 tools:layout_conversion_absoluteWidth="150dp" />
-        
+
             <View
                 android:id="@+id/divider3"
                 android:layout_width="160dp"
@@ -143,9 +146,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="29dp"
                 android:layout_marginLeft="29dp"
-                android:layout_marginRight="23dp"
-                android:layout_marginEnd="23dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
                 android:text="We know how important it is to make a good impression. So we've compiled the 5 most important tips for you when you next talk to someone!"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView32"
@@ -159,46 +162,46 @@
                 android:layout_marginStart="29dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="23dp"
                 android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
                 android:text="1. Resist the urge to arrive late. \n\n2. Ask questions that relates to your passion.\n\n3. Make sure to smile and don't hijack the conversation.\n\n4. Remember to follow-up! Make sure to connect on LinkedIn!\n\n5. Always remember to say thank you!\n\nHere is a little game for you! Can you tell me how many of these tips you have crossed out? Try and see what you are missing and improve on it!"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView12"
                 tools:layout_conversion_absoluteHeight="19dp"
                 tools:layout_conversion_absoluteWidth="227dp" />
 
-        <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="155dp"
-            android:layout_height="179dp"
-            android:layout_marginStart="136dp"
-            android:layout_marginLeft="136dp"
-            android:layout_marginTop="15dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/networking_bingo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView39"
-            tools:layout_conversion_absoluteHeight="179dp"
-            tools:layout_conversion_absoluteWidth="150dp" />
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            >
-
             <ImageView
-                android:id="@+id/space"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/firstday_white"
+                android:id="@+id/imageView14"
+                android:layout_width="155dp"
+                android:layout_height="179dp"
+                android:layout_marginStart="136dp"
+                android:layout_marginLeft="136dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/networking_bingo"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintTop_toBottomOf="@+id/textView39"
+                tools:layout_conversion_absoluteHeight="179dp"
+                tools:layout_conversion_absoluteWidth="150dp" />
 
-    </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:id="@+id/space"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/firstday_white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
     </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
