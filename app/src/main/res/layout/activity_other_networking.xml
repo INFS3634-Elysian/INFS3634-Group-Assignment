@@ -73,17 +73,22 @@
                     android:layout_width="585dp"
                     android:layout_height="269dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/networking_blog" />
+                    app:srcCompat="@drawable/networking_blog"
+                    />
 
                 <TextView
                     android:id="@+id/textView5"
+                    android:fontFamily="@font/bold"
+                    android:text="Network Blog"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/bold"
-                    android:text="Network Blog"
-                    android:textColor="#0B0A0A"
-                    android:textSize="20sp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1.5"
+                    android:shadowDy="1.3"
+                    android:shadowRadius="1.6"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
@@ -110,13 +115,17 @@
 
                 <TextView
                     android:id="@+id/textView2"
+                    android:fontFamily="@font/bold"
+                    android:text="Networking Tips"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/bold"
-                    android:text="Networking Tips"
-                    android:textColor="#050505"
-                    android:textSize="20sp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1.5"
+                    android:shadowDy="1.3"
+                    android:shadowRadius="1.6"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 

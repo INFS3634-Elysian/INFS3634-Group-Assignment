@@ -10,18 +10,14 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-
             <TextView
                 android:id="@+id/txvTitle1"
                 android:layout_width="wrap_content"
@@ -101,8 +97,7 @@
                     android:layout_marginTop="16dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/networking_sandra"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <TextView
                     android:id="@+id/textView13"
@@ -122,12 +117,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="16dp"
                     android:fontFamily="@font/bold"
                     android:text="Sandra Ma"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView4"
-                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/connect1"
@@ -160,11 +154,9 @@
                     android:id="@+id/imageView5"
                     android:layout_width="73dp"
                     android:layout_height="73dp"
-
                     android:layout_marginTop="25dp"
                     android:src="@drawable/networking_truman"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/textView15"
@@ -172,12 +164,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="36dp"
                     android:fontFamily="@font/bold"
                     android:text="Truman Ng"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView5"
-                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView16"
@@ -224,8 +215,7 @@
 
                     android:layout_marginTop="25dp"
                     android:src="@drawable/networking_jasen"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/textView17"
@@ -233,12 +223,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="32dp"
+
                     android:fontFamily="@font/bold"
                     android:text="Jasen Yu"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView6"
-                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView19"
@@ -287,8 +277,7 @@
 
                     android:layout_marginTop="25dp"
                     android:src="@drawable/networking_cathy"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/textView26"
@@ -308,12 +297,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="44dp"
+
                     android:fontFamily="@font/bold"
                     android:text="Cathy Liang"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/connect4"
@@ -331,9 +320,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"/>
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -359,71 +347,12 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/ivNotebook"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivProfile"
-        app:layout_constraintStart_toEndOf="@+id/ivTrophy"
-        android:src="@drawable/nav_notebook" />
-
-    <ImageView
-        android:id="@+id/ivProfile"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivSettings"
-        app:layout_constraintStart_toEndOf="@+id/ivNotebook"
-        android:src="@drawable/nav_profile" />
-
-    <ImageView
-        android:id="@+id/ivTrophy"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivNotebook"
-        app:layout_constraintStart_toEndOf="@+id/ivHome"
-        android:src="@drawable/nav_trophy" />
-
-    <ImageView
-        android:id="@+id/ivHome"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivTrophy"
-        app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/nav_home" />
 
     <ImageView
         android:id="@+id/ivSettings"
@@ -438,6 +367,66 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
-        android:src="@drawable/nav_settings" />
+        app:srcCompat="@drawable/nav_settings" />
+
+    <ImageView
+        android:id="@+id/ivTrophy"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivNotebook"
+        app:layout_constraintStart_toEndOf="@+id/ivHome"
+        app:srcCompat="@drawable/nav_trophy" />
+
+    <ImageView
+        android:id="@+id/ivHome"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivTrophy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/nav_home" />
+
+    <ImageView
+        android:id="@+id/ivNotebook"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivProfile"
+        app:layout_constraintStart_toEndOf="@+id/ivTrophy"
+        app:srcCompat="@drawable/nav_notebook" />
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivSettings"
+        app:layout_constraintStart_toEndOf="@+id/ivNotebook"
+        app:srcCompat="@drawable/nav_profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
